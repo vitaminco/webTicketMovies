@@ -1,0 +1,15 @@
+.contaner__img{
+    margin-top: 20px;
+}
+.contaner__img img{
+    width: 100%;
+}
+.contaner__content{
+    display: inline-block;
+    margin: 20px 0;
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 50px 50px;
+    background-color: rgb(197, 196, 196);
+    border-radius: 2px;
+}

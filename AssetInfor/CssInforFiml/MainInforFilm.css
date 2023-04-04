@@ -1,0 +1,59 @@
+.name__phim h1{
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0 0 20px 20px;
+}
+.full__tab_ifo{
+    background-color: rgba(240, 179, 147, 0.5);
+    padding: 20px 20px;
+}
+.introduct__phim{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.telecommunication img{
+    width: 30px;
+    height: 30px;
+    padding: 5px 5px;
+    box-shadow: 0 1px 2px 0 rgb(0, 0, 0, 0.1);
+    transition: transform ease-in 0.1s;/*dịch lên xuống*/
+    will-change: transform;/*cần khai báo transform*/
+}
+
+.telecommunication img:hover{
+    transform: translateY(-5px); /*nhảy lên xuống khi hover*/
+    box-shadow: 0 1px 20px 0 rgb(0, 0, 0, 0.05);
+}
+.videos{
+    border-radius: 2px;
+}
+/* thời gian chiếu */
+.lichchieu{
+    background-color: rgba(240, 179, 147, 0.5);
+    margin: 20px 0;
+    padding: 20px 20px;
+}
+.name__phim__lichchieu h1{
+    font-size: 2rem;
+    font-weight: 900;
+}
+.name__phim__lichchieu p{
+    color: red;
+}
+.ngaychieu{
+    margin: 10px 0;
+    border-bottom: 1px solid rgb(202, 188, 188);
+}
+.ngaychieu span{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.ngaychieu__btn{
+    margin: 10px 10px;
+    border: none;
+    background-color: var(--primary-color);
+    font-size: 1.6rem;
+}
+.ngaychieu__btn:hover{
+    border: 1px solid var(--white-color);
+}

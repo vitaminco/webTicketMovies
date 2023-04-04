@@ -1,0 +1,215 @@
+﻿body{
+    margin-bottom: 500px;
+}
+.loginTab{
+    display: block;
+}
+.siginTab{
+    display: block;
+}
+.trangchu{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 50px;
+    font-size: 1.4rem;
+}
+.left a{
+    color: var(--black-color);
+}
+.left a:hover{
+    color: var(--black-color);
+    text-decoration: none;   
+}
+.right{
+    color: var(--white-color);
+    background-color: rgb(88, 88, 238);
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+.right:hover{
+    color: var(--white-color);
+    text-decoration: none;
+}
+/*  */
+.Login{
+    display: block;
+    background-color: rgb(0, 0, 0, 0.7);
+    padding: 20px 0;
+    text-align: center;
+}
+.Login h1{
+    color: var(--white-color);
+}
+/* card */
+.card{
+    margin: 60px 20px;
+}
+.card img{
+    border-radius: 5px;
+}
+.name__card{
+    display: block;
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 1.8rem;
+    font-weight: 1000;
+    margin: -25px 60px 0;
+    text-shadow: 1px 1px 1px;
+    border-top: 1px solid var(--black-color);
+    border-bottom: 1px solid var(--black-color);
+}
+/* INFO LOGIN */
+.info__lognin{
+    margin-left: 20px;
+}
+.info__lognin h1{
+    display: block;
+    margin-top: 60px;
+    
+}
+/* email login */
+.email__login{
+    
+}
+.input__login{
+    display: block;
+    margin: 10px 0;
+    
+}
+.email__login input{
+    display: block;
+    padding: 10px 4px 10px 11px;
+    border: none;
+    background-color: bisque;
+    font-size: 1.4rem;
+    width: 521px;
+    border-radius: 2px;
+    margin: 5px 0;
+}
+/* thong tin cá nhân */
+.person__info{
+    margin-left: 20px;
+}
+.person__write{
+    font-size: 1.4rem;
+    
+}
+
+.item__personal {
+    margin-left: -245px;
+}
+.person__write input{
+    padding: 10px 4px 10px 11px;
+    border: none;
+    background-color: bisque;
+    font-size: 1.4rem;
+    width: 521px;
+    border-radius: 2px;
+}
+.btn__signin{
+    background-color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 2px;
+}
+/* dieu khoang */
+.dieukhoang{
+    margin: 50px 20px;
+}
+.list__dieukhoang{
+    font-size: 1.4rem;
+    font-weight: 400;
+    
+}
+
+/* phần đăng nhập */
+.login__right{
+    margin: 60px 20px;
+}
+.form__login{
+    margin: 10px 0;
+}
+.form__login input{
+    display: block;
+    padding: 10px 4px 10px 11px;
+    border: none;
+    background-color: bisque;
+    font-size: 1.4rem;
+    width: 521px;
+    border-radius: 2px;
+    margin: 5px 0;
+}
+.btn__password{
+    display: flex;
+    margin-top: 20px;
+}
+.btn__login button{
+    background-color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 2px;
+}
+.forgot__password a{
+    margin-left: 5px;
+    color: var(--black-color);
+}
+.forgot__password a:hover{
+    color: var(--black-color);
+    text-decoration: none;
+}
+.Link__sigin{
+    color: var(--black-color);
+}
+.Link__sigin:hover{
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+
+/* ưu đãi */
+.container__evens{
+    display: block;
+    margin: 30px 0 60px 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    width: 400px;
+    height: 280px;
+    /* transform: rotate(35deg); xoay hình */
+    text-align: center;
+}
+.container__evens-link-nhan{
+    content: "";
+    display: block;
+    /*tạo hình thoi*/
+    border-bottom: 50px solid rgba(255, 6, 6, 0.7);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 300px;
+    transform: rotate(-45deg);/*xoay nghiêng -45 độ*/
+    position: relative;
+    top: -269px;
+    left: -41px;
+    color: var(--white-color);
+    font-size: 3.1rem;
+    text-align: center;
+    font-weight: 900;
+    
+}
+.container__evens-link{
+    display: block;
+    height: 290px;
+    width: 409px;
+}
+.container__evens-link img{
+    border: 2px solid var(--gray-color);
+    height: 265px;
+    width: 370px;
+}
+.container__evens-link img:hover{
+   border-color: var(--primary-color);
+}
+.content__evens{
+    color: var(--black-color);
+    margin: 5px 0;
+}

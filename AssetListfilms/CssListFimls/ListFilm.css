@@ -1,0 +1,81 @@
+﻿
+.container__movies{
+    display: inline-flex;
+    background-color: rgb(246, 222, 191);
+    width: 585px;
+    height: 320px;
+    margin: 10px 10px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgb(0, 0, 0, 0.1);
+    transition: transform ease 0.1s;
+    will-change: transform;
+}
+.container__movies img{
+
+}
+.container__movies:hover{
+    transform: translateY(-5px); /*nhảy lên xuống khi hover*/
+    box-shadow: 0 1px 20px 0 rgb(0, 0, 0, 0.05);
+}
+.container__movies a:hover{
+    text-decoration: none;
+}
+.container__movies-item-img{
+    width: 100%;
+    background-repeat: no-repeat;
+    margin: 10px 10px;
+}
+.container__movies-content{
+    font-size: 1.4rem;
+    margin: 10px 10px;
+    font-weight: 600;
+}
+.container__movies-content a{
+    color: var(--black-color);
+}
+.container__movies-content a:hover{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.container__movies-list{
+    border-bottom: 2px solid var(--black-color);
+}
+.container__movies-content__list-item{
+    line-height: 2rem;
+    padding: 5px 0;
+}
+.container__movies--even{
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: red;
+    background-color: currentColor;
+    position: absolute;
+}
+.container__movies--even::after{
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: relative;
+
+    top: 15px;
+    left: 0px;
+    border-width: 15px 26px 0 26px ;/*cắt ngang cái boder*/
+    border-style: solid;
+    border-color: currentColor transparent currentColor transparent;
+    
+}
+/* like */
+.container__movies-like{
+    background-color: blue;
+    width: 100px;
+    margin: 5px 30%;
+    padding: 5px 5px;
+    border-radius: 2px;
+}
+.container__movies-like a{
+    color: var(--white-color);
+}
+.container__movies-love{
+    background-color: red;
+}
