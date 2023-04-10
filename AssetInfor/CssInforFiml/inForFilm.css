@@ -1,0 +1,236 @@
+﻿.name__phim h1{
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0 0 20px 20px;
+}
+.full__tab_ifo{
+    background-color: rgba(240, 179, 147, 0.5);
+    padding: 20px 20px;
+}
+.introduct__phim{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.telecommunication img{
+    width: 30px;
+    height: 30px;
+    padding: 5px 5px;
+    box-shadow: 0 1px 2px 0 rgb(0, 0, 0, 0.1);
+    transition: transform ease-in 0.1s;/*dịch lên xuống*/
+    will-change: transform;/*cần khai báo transform*/
+}
+
+.telecommunication img:hover{
+    transform: translateY(-5px); /*nhảy lên xuống khi hover*/
+    box-shadow: 0 1px 20px 0 rgb(0, 0, 0, 0.05);
+}
+.videos{
+    border-radius: 2px;
+}
+/* thời gian chiếu */
+.lichchieu{
+    background-color: rgba(240, 179, 147, 0.5);
+    margin: 20px 0;
+    padding: 20px 20px;
+}
+.name__phim__lichchieu{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 25px 0 0;
+}
+.name__phim__lichchieu-right button{
+    padding: 10px 100px;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: red;
+    width: 400px;
+    height: 50px;
+    border-color: transparent;
+    transition: 1s linear background;
+}
+.name__phim__lichchieu-right button:hover{
+    color: var(--black-color);
+    background-color: var(--primary-color);
+}
+.name__phim__lichchieu-right button i{
+    padding: 0 5px;
+}
+.name__phim__lichchieu h1{
+    font-size: 2rem;
+    font-weight: 900;
+}
+.name__phim__lichchieu p{
+    color: red;
+}
+.ngaychieu{
+    margin: 10px 0;
+    border-bottom: 1px solid rgb(202, 188, 188);
+}
+.ngaychieu span{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.ngaychieu__btn{
+    margin: 10px 10px;
+    border: none;
+    background-color: var(--primary-color);
+    font-size: 1.6rem;
+}
+.ngaychieu__btn:hover{
+    border: 1px solid var(--white-color);
+}
+
+@keyframes growth{
+    from{
+        transform: scale(var(--growth-from));
+    }to{
+        ransform: scale(var(--growth-to));
+    }
+}
+
+/* mua */
+.buy{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    animation: fadeIn linear 0.1s;
+    z-index: 1;
+}
+.buy__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.4);/*tạo lớp phủ mờ toàn màng hình*/
+    /*z-index: 2;quết định tần cao hơn */
+}
+.buy__body{
+    --growth-from: 0.7;
+    --growth-to: 1;
+    z-index: 2;
+
+    margin: auto;
+    position: relative;/*cho nó nàm trên overlay*/
+    animation: growth linear 0.1s;
+}
+/* khung */
+.buy__tickets{
+    width: 900px;
+    height: 800px;
+    display: block;
+    border: 1px solid var(--boder-color);
+    background-color: var(--white-color);
+    border-radius: 3px;
+    
+}
+.buy__tickets__header{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 30px;
+}
+.close__buy{
+    font-size: 2rem;
+    font-weight: 900;
+    background-color: gray;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    color: var(--white-color);
+}
+.buy__tickets__header h1{
+    display: block;
+    
+    font-size: 2.5rem;
+    font-weight: 900;
+    padding: 5px 5px;
+}
+.buy__tickets__head img{
+    padding: 5px 30px 5px;
+    width: 100%;
+    height: 300px;
+    border-radius: 3px;
+}
+.infomations__header h1{
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 900;
+    padding: 5px 5px;
+   
+}
+.infomations__body{
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0 0 30px 0;
+}
+.infomations__footer{
+    padding: 10px ;
+    border-top: 3px solid var(--black-color);
+    border-bottom: 3px solid var(--black-color);
+    
+}
+.infomations__footer h1{
+    display: block;
+    text-align: center;
+    font-weight: 900;
+}
+/* MUA */
+.buy__header h1{
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 900;
+    padding: 5px 5px;
+}
+.btn__kind_of_tickets-list{
+    list-style: none;
+    display: flex;
+}
+.btn__kind_of_tickets-list span{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.btn__kind_of_tickets-item{
+    display: block;
+    font-size: 1.4rem;
+    padding: 5px 30px;
+    border: 3px solid var(--primary-color);
+    margin:  0 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: 1s background-color;
+}
+.btn__kind_of_tickets-item:hover{
+    background-color: var(--primary-color);
+}
+.soluong input{
+    background-color: bisque;
+    border-color: transparent;
+    margin: 0 30px;
+    padding: 3px 4px;
+    width: 257px;
+    height: 30px;
+    font-size: 1.6rem;
+}
+.check span{
+    margin: 0 10px;
+}
+.xacnhan input{
+    background-color: var(--primary-color);
+    margin: 0 40px;
+    border-color: transparent;
+    padding: 8px 40px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    width: 380px;
+    transition: 2s background-color;
+    transition: 2s width;
+}
+.xacnhan input:hover{
+    background-color: rgb(72, 255, 0);
+    width: 350px;
+}

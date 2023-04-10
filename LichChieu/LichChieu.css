@@ -1,0 +1,13 @@
+﻿.buy__img img{
+    width: 100%;
+    height: 300px;
+}
+.lichchieu{
+    background-color: var(--white-color);
+    margin: 10px;
+    color: var(--black-color);
+}
+.lichchieu:hover{
+    text-decoration: none;
+    color: var(--black-color);
+}
