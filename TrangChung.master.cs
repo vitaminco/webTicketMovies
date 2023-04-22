@@ -27,7 +27,7 @@ public partial class TrangChung : System.Web.UI.MasterPage
                 Session["USER"] = txtUSER.Text;
                 Session["PASS"] = txtPASS.Text;
                 lblError.Text = "OK VERRY GOOD!!!";
-                Response.Redirect("QuanTriPhim.aspx");
+                Response.Redirect("Admin/QuanTriPhim.aspx");
             }
             else
             {
