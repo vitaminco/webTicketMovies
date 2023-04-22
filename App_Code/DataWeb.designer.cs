@@ -137,6 +137,13 @@ public partial class DataWebDataContext : System.Data.Linq.DataContext
 			return this.GetTable<DIEUKHOANG>();
 		}
 	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.PHIMANDTHEOAI")]
+	public ISingleResult<PHIMANDTHEOAIResult> PHIMANDTHEOAI()
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+		return ((ISingleResult<PHIMANDTHEOAIResult>)(result.ReturnValue));
+	}
 }
 
 [global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CAUHINH")]
@@ -1853,6 +1860,338 @@ public partial class DIEUKHOANG : INotifyPropertyChanging, INotifyPropertyChange
 		if ((this.PropertyChanged != null))
 		{
 			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
+public partial class PHIMANDTHEOAIResult
+{
+	
+	private int _IDCACBOPHIM;
+	
+	private string _GHICHU;
+	
+	private System.Nullable<int> _IDLOAI;
+	
+	private System.Nullable<int> _IDHINHANH;
+	
+	private System.Nullable<System.DateTime> _NGDAYDANG;
+	
+	private System.Nullable<int> _IDTAIKHOANGTINVIEN;
+	
+	private string _GIABAN;
+	
+	private string _GIAGIAM;
+	
+	private string _TENPHIM;
+	
+	private string _NOIDUNGPHIM;
+	
+	private string _MAPHONG;
+	
+	private string _XUATCHIEU;
+	
+	private string _VIDEOS;
+	
+	private string _HINHANHPHIM;
+	
+	private string _THOILUONG;
+	
+	private int _IDLOAI1;
+	
+	private string _LOAIPHIM;
+	
+	private string _THELOAIPHIM;
+	
+	public PHIMANDTHEOAIResult()
+	{
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCACBOPHIM", DbType="Int NOT NULL")]
+	public int IDCACBOPHIM
+	{
+		get
+		{
+			return this._IDCACBOPHIM;
+		}
+		set
+		{
+			if ((this._IDCACBOPHIM != value))
+			{
+				this._IDCACBOPHIM = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GHICHU", DbType="NVarChar(MAX)")]
+	public string GHICHU
+	{
+		get
+		{
+			return this._GHICHU;
+		}
+		set
+		{
+			if ((this._GHICHU != value))
+			{
+				this._GHICHU = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLOAI", DbType="Int")]
+	public System.Nullable<int> IDLOAI
+	{
+		get
+		{
+			return this._IDLOAI;
+		}
+		set
+		{
+			if ((this._IDLOAI != value))
+			{
+				this._IDLOAI = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDHINHANH", DbType="Int")]
+	public System.Nullable<int> IDHINHANH
+	{
+		get
+		{
+			return this._IDHINHANH;
+		}
+		set
+		{
+			if ((this._IDHINHANH != value))
+			{
+				this._IDHINHANH = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGDAYDANG", DbType="Date")]
+	public System.Nullable<System.DateTime> NGDAYDANG
+	{
+		get
+		{
+			return this._NGDAYDANG;
+		}
+		set
+		{
+			if ((this._NGDAYDANG != value))
+			{
+				this._NGDAYDANG = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDTAIKHOANGTINVIEN", DbType="Int")]
+	public System.Nullable<int> IDTAIKHOANGTINVIEN
+	{
+		get
+		{
+			return this._IDTAIKHOANGTINVIEN;
+		}
+		set
+		{
+			if ((this._IDTAIKHOANGTINVIEN != value))
+			{
+				this._IDTAIKHOANGTINVIEN = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIABAN", DbType="NVarChar(MAX)")]
+	public string GIABAN
+	{
+		get
+		{
+			return this._GIABAN;
+		}
+		set
+		{
+			if ((this._GIABAN != value))
+			{
+				this._GIABAN = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIAGIAM", DbType="NVarChar(MAX)")]
+	public string GIAGIAM
+	{
+		get
+		{
+			return this._GIAGIAM;
+		}
+		set
+		{
+			if ((this._GIAGIAM != value))
+			{
+				this._GIAGIAM = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENPHIM", DbType="NVarChar(MAX)")]
+	public string TENPHIM
+	{
+		get
+		{
+			return this._TENPHIM;
+		}
+		set
+		{
+			if ((this._TENPHIM != value))
+			{
+				this._TENPHIM = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOIDUNGPHIM", DbType="NVarChar(MAX)")]
+	public string NOIDUNGPHIM
+	{
+		get
+		{
+			return this._NOIDUNGPHIM;
+		}
+		set
+		{
+			if ((this._NOIDUNGPHIM != value))
+			{
+				this._NOIDUNGPHIM = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAPHONG", DbType="NVarChar(MAX)")]
+	public string MAPHONG
+	{
+		get
+		{
+			return this._MAPHONG;
+		}
+		set
+		{
+			if ((this._MAPHONG != value))
+			{
+				this._MAPHONG = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_XUATCHIEU", DbType="NVarChar(MAX)")]
+	public string XUATCHIEU
+	{
+		get
+		{
+			return this._XUATCHIEU;
+		}
+		set
+		{
+			if ((this._XUATCHIEU != value))
+			{
+				this._XUATCHIEU = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VIDEOS", DbType="NVarChar(MAX)")]
+	public string VIDEOS
+	{
+		get
+		{
+			return this._VIDEOS;
+		}
+		set
+		{
+			if ((this._VIDEOS != value))
+			{
+				this._VIDEOS = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HINHANHPHIM", DbType="NVarChar(MAX)")]
+	public string HINHANHPHIM
+	{
+		get
+		{
+			return this._HINHANHPHIM;
+		}
+		set
+		{
+			if ((this._HINHANHPHIM != value))
+			{
+				this._HINHANHPHIM = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_THOILUONG", DbType="NVarChar(MAX)")]
+	public string THOILUONG
+	{
+		get
+		{
+			return this._THOILUONG;
+		}
+		set
+		{
+			if ((this._THOILUONG != value))
+			{
+				this._THOILUONG = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLOAI1", DbType="Int NOT NULL")]
+	public int IDLOAI1
+	{
+		get
+		{
+			return this._IDLOAI1;
+		}
+		set
+		{
+			if ((this._IDLOAI1 != value))
+			{
+				this._IDLOAI1 = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LOAIPHIM", DbType="NVarChar(MAX)")]
+	public string LOAIPHIM
+	{
+		get
+		{
+			return this._LOAIPHIM;
+		}
+		set
+		{
+			if ((this._LOAIPHIM != value))
+			{
+				this._LOAIPHIM = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_THELOAIPHIM", DbType="NVarChar(MAX)")]
+	public string THELOAIPHIM
+	{
+		get
+		{
+			return this._THELOAIPHIM;
+		}
+		set
+		{
+			if ((this._THELOAIPHIM != value))
+			{
+				this._THELOAIPHIM = value;
+			}
 		}
 	}
 }

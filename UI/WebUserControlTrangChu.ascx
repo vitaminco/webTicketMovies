@@ -74,17 +74,19 @@
                             Chọn phim
                             <i class="fa-sharp fa-solid fa-angle-down"></i>
                             <!-- con -->
-                            <%for(int i=0; i<listPhim.Count; i++){ %>
+                           
                             <div class="container__body-body-function">
                                 <ul class="container__body-body-function--list">
+                                     <%for(int i=0; i<listPhim.Count; i++){ %>
                                     <li class="container__body-body-function--item">
                                         <a href='<%="ChiTietPhim.aspx?IdNews="+listPhim[i].IDCACBOPHIM.ToString() %>'>
                                             <%=listPhim[i].TENPHIM %>
                                         </a>
                                     </li>  
+                                    <%} %>
                                 </ul>
                             </div>
-                            <%} %>
+                            
                         </li>
                         <li class="container__body-body--item">
                             Chọn ngày
@@ -118,6 +120,22 @@
                                     <h4 class="home-product-item__name"><%=listPhim[i].TENPHIM %></h4>
                                     <p class="infor">
                                         <i class="fa-sharp fa-solid fa-play"></i>
+                                        THỜI LƯỢNG: 
+                                        <%=listPhim[i].THOILUONG %>
+                                    </p>
+                                     <p class="infor">
+                                        <i class="fa-sharp fa-solid fa-play"></i>
+                                         THỂ LOẠI: 
+                                        <%=listPhim[i].THELOAIPHIM %>
+                                    </p>
+                                    <p class="infor">
+                                        <i class="fa-sharp fa-solid fa-play"></i>
+                                         GIÁ BÁN: 
+                                        <%=listPhim[i].GIABAN %>
+                                    </p>
+                                     <p class="infor">
+                                        <i class="fa-sharp fa-solid fa-play"></i>
+                                         NỘI DUNG: 
                                         <%=listPhim[i].NOIDUNGPHIM %>
                                     </p>
                                 </div>

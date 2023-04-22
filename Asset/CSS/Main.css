@@ -39,6 +39,14 @@
     justify-content: center;
     position: absolute;
     z-index: 2;
+    
+
+    --growth-from: 0.7;
+    --growth-to: 1;
+
+    margin: auto;
+    
+    animation: growth linear 0.1s;
 }
 .DK__DN{
     display: none;
@@ -48,6 +56,9 @@
     position: absolute;
     z-index: 2;
     border-radius: 2px;
+   
+
+   
 }
 /* close tab */
 .close__tab{

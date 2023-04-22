@@ -51,73 +51,103 @@
         </div>
 
         <div class="lichchieu">
-            <div class="name__phim__lichchieu">
-                <h1>LỊCH CHIẾU - MẤT TÍCH - MISSING</h1>
-                <hr>
-                <p>(Click vào suất chiếu để tiến hành đặt vé)</p>
+                <div class="name__phim__lichchieu">
+                    <div class="name__phim__lichchieu-left">
+                        <h1>LỊCH CHIẾU - MẤT TÍCH - MISSING</h1>
+                        <hr>
+                        <p>(Click vào suất chiếu để tiến hành đặt vé)</p>
+                    </div>
+                    <div class="name__phim__lichchieu-right">
+                        <button onclick="mua();"><i class="fa-sharp fa-solid fa-cart-shopping"></i>MUA VÉ</button>
+                    </div>
+                </div>
+                <div class="ngaychieu">
+                    <span>NGÀY CHIẾU</span> <br>
+                    <span>Hôm nay (29-02-2023) :</span> <br>
+                    <span style="color: red;font-weight: 800;">RẠP ABC</span> <br>
+                    <button class="ngaychieu__btn">18:50</button>
+                    <button class="ngaychieu__btn">18:50</button>
+                    <button class="ngaychieu__btn">18:50</button>
+                    <button class="ngaychieu__btn">18:50</button>
+                </div>
+                
             </div>
-            <div class="ngaychieu">
-                <span>NGÀY CHIẾU</span> <br>
-                <span>Hôm nay (29-02-2023) :</span> <br>
-                <span style="color: red;font-weight: 800;">RẠP ABC</span> <br>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-            </div>
-            <div class="ngaychieu">
-                <span>NGÀY CHIẾU</span> <br>
-                <span>Hôm nay (29-02-2023) :</span> <br>
-                <span style="color: red;font-weight: 800;">RẠP ABC</span> <br>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-            </div>
-            <div class="ngaychieu">
-                <span>NGÀY CHIẾU</span> <br>
-                <span>Hôm nay (29-02-2023) :</span> <br>
-                <span style="color: red;font-weight: 800;">RẠP ABC</span> <br>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-            </div>
-            <div class="ngaychieu">
-                <span>NGÀY CHIẾU</span> <br>
-                <span>Hôm nay (29-02-2023) :</span> <br>
-                <span style="color: red;font-weight: 800;">RẠP ABC</span> <br>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-            </div>
-            <div class="ngaychieu">
-                <span>NGÀY CHIẾU</span> <br>
-                <span>Hôm nay (29-02-2023) :</span> <br>
-                <span style="color: red;font-weight: 800;">RẠP ABC</span> <br>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-            </div>
-            <div class="ngaychieu">
-                <span>NGÀY CHIẾU</span> <br>
-                <span>Hôm nay (29-02-2023) :</span> <br>
-                <span style="color: red;font-weight: 800;">RẠP ABC</span> <br>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-            </div>
-            <div class="ngaychieu">
-                <span>NGÀY CHIẾU</span> <br>
-                <span>Hôm nay (29-02-2023) :</span> <br>
-                <span style="color: red;font-weight: 800;">RẠP ABC</span> <br>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
-                <button class="ngaychieu__btn">18:50</button>
+    </div>
+
+ <!-- mua -->
+        <div class="buy" id="muave">
+            <div class="buy__overlay"></div>
+            <div class="buy__body">
+                <div class="buy__tickets">
+                    <div class="buy__tickets__head">
+                        <div class="buy__tickets__header">
+                            <div class="name_movie">
+                                <h1>BẢY CHÚ LÙN</h1>
+                            </div>
+                            <div class="close__buy">
+                                <span onclick="closebuy();">X</span>
+                            </div>
+                        </div>
+                        <img src="./Asset/images/even2.png" alt="">
+                    </div>
+                    <hr>
+                <div class="grid">
+                    <div class="grid__row">
+                    <div class="grid__colum-5">
+                        <div class="infomations">
+                            <div class="infomations__header">
+                                <h1>QUI ĐỊNH VỀ MUA VÉ</h1>
+                            </div>
+                            <div class="infomations__body">
+                                <ul>
+                                    <li>Đạo diễn: Nick Johnson, Will MerrickDiễn viên: Storm Reid, Nia Long, Joaquim de Almeida, Tim Griffin, Daniel Henney, Amy Landecker</li>
+                                    <li>Ngôn ngữ: Phụ đề Tiếng Việt</li>
+                                    <li>Những người từng tạo ra SEARCHING đã trở lại với MISSING ! “Missing” bắt đầu khi Grace (Nia Long) cùng bạn trai Kevin Lin (Ken Leung) </li>
+                                    <li>đi du lịch Colombia. Sau vài ngày không liên lạc, cô con gái Ali (Storm Reid) bàng hoàng nhận ra mẹ mình đã mất tích một cách bí ẩn. </li>
+                                    <li>Hết cách, Ali đành phải cố đăng nhập vào các tài khoản liên lạc hay mạng xã hội của mẹ để tìm manh mối. Cô dần khám phá ra những bí mật</li> 
+                                    <li>đen tối mà Grace che giấu suốt bấy lấu. Hàng loạt câu hỏi ập xuống đầu cô gái trẻ.</li>
+                                    <li>Những mối quan hệ xã hội của Grace là ai? Thân phận thật sự của Kevin là gì? Liệu gã có phải tội phạm và lên kế hoạch bắt cóc Grace?</li>
+                                </ul>
+                            </div>
+                            <div class="infomations__footer">
+                                <h1>MEGA +</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid__colum-5">
+                        <div class="buy__phim">
+                            <div class="buy__header">
+                                <h1>MUA VÉ</h1>
+                            </div>
+                            <div class="btn__kind_of_tickets">
+                                <ul class="btn__kind_of_tickets-list">
+                                    <span>LOẠI VÉ: </span>
+                                    <li class="btn__kind_of_tickets-item">THUÒNG</li>
+                                    <li class="btn__kind_of_tickets-item">VIP</li>
+                                </ul>
+                                <ul class="btn__kind_of_tickets-list">
+                                    <span>THỜI GIAN: </span>
+                                    <li class="btn__kind_of_tickets-item">12:00am</li>
+                                    <li class="btn__kind_of_tickets-item">12:00pm</li>
+                                </ul>
+                                <ul class="btn__kind_of_tickets-list soluong">
+                                    <span>SỐ LƯỢNG: </span>
+                                    <input type="number" name="soluong">
+                                </ul>
+                                 <hr>
+                                <ul class="btn__kind_of_tickets-list check">
+                                    <input type="checkbox"> <span>Tôi đã đọc và chấp nhận</span>
+                                </ul>
+                                <div class="xacnhan">
+                                    <input type="submit" value="XÁC NHẬN">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>    
+                </div>
             </div>
         </div>
-    </div>

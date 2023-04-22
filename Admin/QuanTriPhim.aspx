@@ -9,9 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-       <h1>QUẢN TRỊ CÁC BỘ PHIM</h1>
-
-        <asp:DataGrid ID="gridPhim" runat="server" AllowCustomPaging="true" PageSize ="2" AutoGenerateColumns="false" DataKeyField="IDCACBOPHIM">
+       <h1>QUẢN TRỊ CÁC BỘ PHIM<asp:DataGrid ID="gridPhim" runat="server" AllowCustomPaging="true" PageSize ="2" PagerStyle-Mode="NumericPages" AutoGenerateColumns="false" DataKeyField="IDCACBOPHIM" OnSelectedIndexChanged="gridPhim_SelectedIndexChanged">
             <Columns>
                 <asp:TemplateColumn>
                     <ItemTemplate>
@@ -36,6 +34,8 @@
                 </asp:TemplateColumn>
             </Columns>
         </asp:DataGrid>
+        </h1>
+
     </div>
     </form>
 </body>

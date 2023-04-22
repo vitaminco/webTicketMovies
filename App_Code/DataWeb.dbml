@@ -85,4 +85,26 @@
       <Column Name="NOIDUNGDIEUKHOANG" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
+  <Function Name="dbo.PHIMANDTHEOAI" Method="PHIMANDTHEOAI">
+    <ElementType Name="PHIMANDTHEOAIResult">
+      <Column Name="IDCACBOPHIM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GHICHU" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IDLOAI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDHINHANH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NGDAYDANG" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IDTAIKHOANGTINVIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GIABAN" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GIAGIAM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TENPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NOIDUNGPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MAPHONG" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="XUATCHIEU" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VIDEOS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="HINHANHPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="THOILUONG" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IDLOAI1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LOAIPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="THELOAIPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

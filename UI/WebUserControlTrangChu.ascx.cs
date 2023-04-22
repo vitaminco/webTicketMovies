@@ -12,6 +12,7 @@ public partial class UI_WebUserControlTrangChu : System.Web.UI.UserControl
     public static List<PHIM> listPhim = new List<PHIM>();
     public static List<KHUYENMAI> listKhuyenMai = new List<KHUYENMAI>();
     public static List<TINTUC> listTin = new List<TINTUC>();
+    public static List<PHIMANDTHEOAIResult> listPhimAndLoai = new List<PHIMANDTHEOAIResult>();
     protected void Page_Load(object sender, EventArgs e)
     {
         LoadHinh();
@@ -55,4 +56,15 @@ public partial class UI_WebUserControlTrangChu : System.Web.UI.UserControl
             listTin = data.ToList();
         }
     }
+
+  /*  void LoadPhimAndLoai()
+    {
+        var data = from q in db.PHIMANDTHEOAI()
+                   select q;
+        if (data != null && data.Count() > 0)
+        {
+            listPhimAndLoai = data.ToList();
+        }
+    }
+   */
 }

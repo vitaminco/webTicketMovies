@@ -1,5 +1,5 @@
 //phần đăng kí và đăng nhập
-function hienthiDN(){
+function hienthiDN() {
     //hiện đăng nhập
     var divht = document.getElementById("Login__tab");
     divht.setAttribute("style", "display: block");
@@ -14,7 +14,7 @@ function hienthiDN(){
     phu__tab.setAttribute("style", "display: inline-flex")
 
 }
-function hienthiDK(){
+function hienthiDK() {
     //hiện đăng kí
     var divht = document.getElementById("Sigin__tab");
     divht.setAttribute("style", "display: block");
@@ -30,7 +30,7 @@ function hienthiDK(){
 
 }
 //close tab dk -dn
-function close__dk_dn(){
+function close__dk_dn() {
     //cái nút đóng ẩn cái khung
     var an = document.getElementById("DN__DK");
     an.setAttribute("style", "display: none");
@@ -38,5 +38,14 @@ function close__dk_dn(){
     var phu__tab = document.getElementById("lopphu__dkdn");
     phu__tab.setAttribute("style", "display: none")
 }
+// mua
+function mua() {
+    var divht = document.getElementById("muave");
+    divht.setAttribute("style", "display: flex");
 
+}
+function closebuy() {
+    var divht = document.getElementById("muave");
+    divht.setAttribute("style", "display: none");
+}
 
