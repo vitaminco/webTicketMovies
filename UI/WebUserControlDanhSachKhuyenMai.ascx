@@ -23,7 +23,7 @@
                 
                 <div class="grid__row">
                     <%for(int i=0; i<listKhuyenMai.Count; i++){ %>
-                        <div class="container__evens">
+                        <div class="container__evens container__evens-lust">
                             
                             <a href='<%="ChiTietKhuyenMai.aspx?IdNews="+listKhuyenMai[i].IDKHUYENMAI.ToString() %>' class="container__evens-link">
                                 <img src='<%="./Asset/images/"+listKhuyenMai[i].HINHANHKHUYENMAI %>' alt="">

@@ -72,6 +72,32 @@
     border-radius: 60px;
 }
 
+.login__right input{
+    display: block;
+    padding: 10px 4px 10px 11px;
+    border: none;
+    background-color: bisque;
+    font-size: 1.4rem;
+    width: 521px;
+    border-radius: 2px;
+    margin: 5px 0;
+}
+.container__evens-lust{
+    display: block;
+    margin: 30px 0 60px 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    width: 400px;
+    height: 280px;
+    /* transform: rotate(35deg); xoay hình */
+    text-align: center;
+}
+.hhh{
+    display: block;
+    max-width: 400px;
+    max-height: 21px;
+    overflow: hidden;
+}
     </style>
      
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -116,16 +142,17 @@
                             <div class="grid__colum-5">
                                 <div class="login__right">
                                     <h1>BẠN ĐÃ LÀ THÀNH VIÊN ?</h1>
-                                    <span>Vui lòng nhập email và mật khẩu của bạn để đăng nhập.</span>
+                                    <asp:Label ID="lblError" runat="server" Text="Vui lòng nhập email và mật khẩu của bạn để đăng nhập!!!" ForeColor="red"></asp:Label> <br />
+                                    
                                     <form class="form__login" action="" method="post">
-                                        <label for="Email">Nhập email</label>
-                                        <input type="text" id="your__email" name="your__email"/> <br>
-                                        <label for="password">Nhập mật khẩu</label>
-                                        <input type="password" id="your__password" name="your__password"/>
+                                        <asp:label for="Email" runat="server" Text="Nhập email"></asp:label>
+                                        <asp:TextBox  ID="txtUSER" runat="server"></asp:TextBox> <br/>
+                                        <asp:label for="password" runat="server" Text="Nhập mật khẩu"></asp:label>
+                                        <asp:TextBox  ID="txtPASS" runat="server" TextMode="Password"></asp:TextBox><br/>
 
                                         <div class="btn__password">
                                             <div class="btn__login">
-                                                <button>ĐĂNG NHẬP</button>
+                                                <asp:button ID="btnDangNhap" runat="server" Text="ĐĂNG NHẬP" OnClick="btnDangNhap_Click"/>
                                             </div>
                                             <div class="forgot__password">
                                                 <a href="">Quên mật khẩu</a>

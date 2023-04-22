@@ -496,7 +496,7 @@ text-overflow: ellipsis;
 
 .hhh{
     display: block;
-    max-width: 270px;
+    max-width: 400px;
     max-height: 21px;
     overflow: hidden;
 }
