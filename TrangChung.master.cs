@@ -25,8 +25,7 @@ public partial class TrangChung : System.Web.UI.MasterPage
             if (dat != null && dat.Count() > 0)
             {
                 Session["USER"] = txtUSER.Text;
-                Session["PASS"] = txtPASS.Text;
-                lblError.Text = "OK VERRY GOOD!!!";
+                Session["PASS"] = txtPASS.Text;  
                 Response.Redirect("Admin/QuanTriPhim.aspx");
             }
             else
@@ -36,7 +35,7 @@ public partial class TrangChung : System.Web.UI.MasterPage
         }
         else
         {
-            lblError.Text = "Đăng nhập không thành công, thông tin không chính xác";
+            lblError.Text = "Đăng nhập không thành công";
         }
     }
 }

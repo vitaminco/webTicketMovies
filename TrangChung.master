@@ -145,9 +145,9 @@
                                     <asp:Label ID="lblError" runat="server" Text="Vui lòng nhập email và mật khẩu của bạn để đăng nhập!!!" ForeColor="red"></asp:Label> <br />
                                     
                                     <form class="form__login" action="" method="post">
-                                        <asp:label for="Email" runat="server" Text="Nhập email"></asp:label>
+                                        <asp:label runat="server" Text="Nhập email"></asp:label>
                                         <asp:TextBox  ID="txtUSER" runat="server"></asp:TextBox> <br/>
-                                        <asp:label for="password" runat="server" Text="Nhập mật khẩu"></asp:label>
+                                        <asp:label runat="server" Text="Nhập mật khẩu"></asp:label>
                                         <asp:TextBox  ID="txtPASS" runat="server" TextMode="Password"></asp:TextBox><br/>
 
                                         <div class="btn__password">
