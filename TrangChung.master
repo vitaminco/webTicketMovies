@@ -98,6 +98,11 @@
     max-height: 21px;
     overflow: hidden;
 }
+.hinhlogo img{
+    width: 500px;
+    height: 500px;
+    margin: 104px 0;
+}
     </style>
      
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -338,9 +343,9 @@
             <nav class="tienich">
                 <div class="tienich__blog">
                     <ul class="tienich__blog-list">
-                        <li><a href="./indexFilms.html" class="tienich__blog-item">LỊCH CHIẾU</a></li>
+                        <li><a href="LichChieu.aspx" class="tienich__blog-item">LỊCH CHIẾU</a></li>
                         <li><a href="DanhSachPhim.aspx" class="tienich__blog-item">PHIM</a></li>
-                        <li><a href="./indexGT.html" class="tienich__blog-item">RẠP & GIÁ VÉ</a></li>
+                        <li><a href="GiaVe.aspx" class="tienich__blog-item">RẠP & GIÁ VÉ</a></li>
                         <li><a href="DanhSachKhuyenMai.aspx" class="tienich__blog-item">ƯU ĐÃI</a></li>
                     </ul>
 
@@ -366,27 +371,26 @@
                     <div class="grid__colum-6">
                         <div class="footer__left">
                             <ul class="footer__left-list">
-                                <li class="footer__left-item"><a href="./indexFilms.html">LỊCH CHIẾU</a></li>
-                                <li class="footer__left-item"><a href="./indexFilms.html">PHIM</a></li>
-                                <li class="footer__left-item"><a href="./indexGT.html">RẠP & GIÁ VÉ</a></li>
+                                <li class="footer__left-item"><a href="LichChieu.aspx">LỊCH CHIẾU</a></li>
+                                <li class="footer__left-item"><a href="DanhSachPhim.aspx">PHIM</a></li>
+                                <li class="footer__left-item"><a href="GiaVe.aspx">RẠP & GIÁ VÉ</a></li>
                                 <li class="footer__left-item"><a href="DanhSachKhuyenMai.aspx">ƯU ĐÃI</a></li>
                             </ul>
                             <ul class="footer__left-list">
-                                <li class="footer__left-item"><a href="./indexGT.html">GIỚI THIỆU</a></li>
-                                <li class="footer__left-item"><a href="./IndexSL.html">SỰ KIỆN</a></li>
-                                <li class="footer__left-item"><a href="./IndexSL.html">DỊCH VỤ</a></li>
-                                <li class="footer__left-item"><a href="./indexGT.html">ĐIỀU KHOẢNG CHUNG</a></li>
-                                <li class="footer__left-item"><a href="./indexGT.html">LIÊN HỆ</a></li>
+                                <li class="footer__left-item"><a href="GioiThieu.aspx">GIỚI THIỆU</a></li>
+                               
+                                <li class="footer__left-item"><a href="DieuKhoang.aspx">ĐIỀU KHOẢNG CHUNG</a></li>
+                                <li class="footer__left-item"><a href="LienHe.aspx">LIÊN HỆ</a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="grid__colum-4">
+                   <div class="grid__colum-4">
                         <div class="footer__right">
                             <div class="hotline">
                                 <div class="hotline-list">
-                                    <span>RẠP PHIM</span>
-                                    <span>000000000</span>
+                                    <span>RẠP PHIM <%=strCopyTenRap %></span>
+                                    <span>+84 <%=strCopySDT %></span>
                                 </div>
                                 <div class="hotline-img">
                                     <img src="./Asset/images/footer-phone.png" alt="">
@@ -403,7 +407,7 @@
 
             <div class="footer__bottom">
                 <div class="grid">
-                    <p class="footer__text">No Coppyright 2023 - Bản quyền thuộc vể Công ty ABC</p>
+                    <p class="footer__text">No Coppyright 2023 - Bản quyền thuộc <%=strCopyTenCT %></p>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@
 <script lang="javascript">
     //chuyển động ngang
     var hinh = [
-             <%for (int i = 0; i < listHinh.Count; i++ ){%>
+             <%for (int i = 0; i < listPhim.Count; i++ ){%>
              "<%="./Asset/images/"+listHinh[i].HINHANHBANNER%>",
              
              <%}%>
@@ -38,7 +38,7 @@
             <!--the slideshow--> <!--cần phải thêm hình vào từng div thì mới chạy thành 1 chuỗi( cố định div đầu tiên bằng cách thêm active)-->
     <div class="container">
                   
-             <img src='<%="./Asset/images/" + listHinh[0].HINHANHBANNER%>' alt="los Angeles" width="1200" height="500" id="slider">
+            <img src='<%="./Asset/images/" + listHinh[0].HINHANHBANNER%>' alt="los Angeles" width="1200" height="500" id="slider">
                     
         <div class="navigation">
             <div class="prev nav-btn" onclick="prev()"><</div>
@@ -98,7 +98,7 @@
 
             <!-- phim đang chiếu or phim sắp chiếu -->
             <div class="container__body-second">
-                <button class="container__body-second--button-one">PHIM ĐANG CHIẾU</button>
+               <!-- <button class="container__body-second--button-one">PHIM ĐANG CHIẾU</button>-->
                 <button class="container__body-second--button-two">PHIM SẮP CHIẾU</button>
             </div>
         </div>
