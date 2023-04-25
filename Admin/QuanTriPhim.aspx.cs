@@ -37,7 +37,26 @@ public partial class QuanTriPhim : System.Web.UI.Page
     }
     protected void gridPhim_ItemCommand(object source, DataGridCommandEventArgs e)
     {
-
+        if (((LinkButton)e.CommandSource).CommandName == "UpdatePhim")
+        {
+            long idP = Convert.ToInt32(gridPhim.DataKeys[e.Item.ItemIndex].ToString());
+            Response.Redirect("UpdatePhim.aspx?IdPhim=" + idP.ToString());
+        }
+        if (((LinkButton)e.CommandSource).CommandName == "DeletePhim")
+        {
+            long idP = Convert.ToInt32(gridPhim.DataKeys[e.Item.ItemIndex].ToString());
+            var data = from q in db.PHIMs
+                       where q.IDCACBOPHIM == idP
+                       select q;
+            if (data != null && data.Count() > 0)
+            {
+                PHIM infoPhim = data.First();
+                db.PHIMs.DeleteOnSubmit(infoPhim);
+                db.SubmitChanges();
+                LoadPhim();
+            }
+        }
+        
     }
     protected void gridPhim_PageIndexChanged(object source, DataGridPageChangedEventArgs e)
     {

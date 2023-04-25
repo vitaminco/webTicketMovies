@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="QuanTriPhim.aspx.cs" Inherits="QuanTriPhim" %>
 
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -17,7 +18,7 @@
             <Columns>
                 <asp:TemplateColumn>
                     <ItemTemplate>
-                        <img src='<%#"./Asset/images/" + Eval("HINHANHPHIM") %>' width="200" height="200" />
+                        <img src='<%#"../Asset/images/" + Eval("HINHANHPHIM") %>' width="200" height="300" />
                     </ItemTemplate>
                 </asp:TemplateColumn>
             </Columns>

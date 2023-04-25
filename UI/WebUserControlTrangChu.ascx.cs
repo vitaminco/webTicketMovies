@@ -19,6 +19,7 @@ public partial class UI_WebUserControlTrangChu : System.Web.UI.UserControl
         LoadPhim();
         LoadKhuyenMai();
         LoadTin();
+        LoadPhimAndLoai();
     }
     void LoadHinh()
     {
@@ -57,14 +58,14 @@ public partial class UI_WebUserControlTrangChu : System.Web.UI.UserControl
         }
     }
 
-  /*  void LoadPhimAndLoai()
+   void LoadPhimAndLoai()
     {
-        var data = from q in db.PHIMANDTHEOAI()
-                   select q;
+        var data = db.PHIMANDTHEOAI().ToList();
+
         if (data != null && data.Count() > 0)
         {
             listPhimAndLoai = data.ToList();
         }
     }
-   */
+   
 }

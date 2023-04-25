@@ -107,36 +107,36 @@
             <div class="home-product">
                 <div class="grid__row-oo grid__row-boder">
                     <!-- item -->
-                    <%for(int i =0; i<listPhim.Count; i++){ %>
-                    <a href='<%="ChiTietPhim.aspx?IdNews="+listPhim[i].IDCACBOPHIM.ToString() %>'>
+                    <%for(int i =0; i<listPhimAndLoai.Count; i++){ %>
+                    <a href='<%="ChiTietPhim.aspx?IdNews="+listPhimAndLoai[i].IDCACBOPHIM.ToString() %>'>
                         <div class="grid__row-item">
                             <div class="home-product-item">
                                 
                                 <div class="home-product-item__img">
-                                    <img class="imgmain" src='<%="./Asset/images/"+listPhim[i].HINHANHPHIM %>' alt="" width="100%" height="300px">
+                                    <img class="imgmain" src='<%="./Asset/images/"+listPhimAndLoai[i].HINHANHPHIM %>' alt="" width="100%" height="300px">
                                 </div>
                                 
                                 <div class="home-product-item__infomation">
-                                    <h4 class="home-product-item__name"><%=listPhim[i].TENPHIM %></h4>
+                                    <h4 class="home-product-item__name"><%=listPhimAndLoai[i].TENPHIM %></h4>
                                     <p class="infor">
                                         <i class="fa-sharp fa-solid fa-play"></i>
                                         THỜI LƯỢNG: 
-                                        <%=listPhim[i].THOILUONG %>
+                                        <%=listPhimAndLoai[i].THOILUONG %>
                                     </p>
                                      <p class="infor">
                                         <i class="fa-sharp fa-solid fa-play"></i>
                                          THỂ LOẠI: 
-                                        <%=listPhim[i].THELOAIPHIM %>
+                                        <%=listPhimAndLoai[i].THELOAIPHIM %>
                                     </p>
                                     <p class="infor">
                                         <i class="fa-sharp fa-solid fa-play"></i>
                                          GIÁ BÁN: 
-                                        <%=listPhim[i].GIABAN %>
+                                        <%=listPhimAndLoai[i].GIABAN %>
                                     </p>
                                      <p class="infor">
                                         <i class="fa-sharp fa-solid fa-play"></i>
                                          NỘI DUNG: 
-                                        <%=listPhim[i].NOIDUNGPHIM %>
+                                        <%=listPhimAndLoai[i].NOIDUNGPHIM %>
                                     </p>
                                 </div>
                             </div>

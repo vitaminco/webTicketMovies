@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLWEBTICKETMOVIES" Class="DataWebDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-9SAS8HE\VITAMINCO;Initial Catalog=QLWEBTICKETMOVIES;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLWEBTICKETMOVIESConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-9SAS8HE\VITAMINCO;Initial Catalog=QLWEBTICKETMOVIES;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLWEBTICKETMOVIESConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CAUHINH" Member="CAUHINHs">
     <Type Name="CAUHINH">
       <Column Name="IDCAUHINH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -20,7 +20,6 @@
       <Column Name="IDTAIKHOANGTHANHVIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="HINHANHBANNER" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Association Name="HINHANH_KHUYENMAI" Member="KHUYENMAIs" ThisKey="IDHINHANH" OtherKey="IDHINHANH" Type="KHUYENMAI" />
-      <Association Name="HINHANH_PHIM" Member="PHIMs" ThisKey="IDHINHANH" OtherKey="IDHINHANH" Type="PHIM" />
     </Type>
   </Table>
   <Table Name="dbo.KHUYENMAI" Member="KHUYENMAIs">
@@ -36,28 +35,6 @@
       <Column Name="HINHANHKHUYENMAI" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Association Name="HINHANH_KHUYENMAI" Member="HINHANH" ThisKey="IDHINHANH" OtherKey="IDHINHANH" Type="HINHANH" IsForeignKey="true" />
       <Association Name="PHIM_KHUYENMAI" Member="PHIM" ThisKey="IDCACBOPHIM" OtherKey="IDCACBOPHIM" Type="PHIM" IsForeignKey="true" DeleteRule="CASCADE" />
-    </Type>
-  </Table>
-  <Table Name="dbo.PHIM" Member="PHIMs">
-    <Type Name="PHIM">
-      <Column Name="IDCACBOPHIM" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="GHICHU" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="IDLOAI" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="IDHINHANH" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NGDAYDANG" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="IDTAIKHOANGTINVIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="GIABAN" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="GIAGIAM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="TENPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="NOIDUNGPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="MAPHONG" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="XUATCHIEU" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="VIDEOS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="HINHANHPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="THOILUONG" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Association Name="PHIM_KHUYENMAI" Member="KHUYENMAIs" ThisKey="IDCACBOPHIM" OtherKey="IDCACBOPHIM" Type="KHUYENMAI" />
-      <Association Name="HINHANH_PHIM" Member="HINHANH" ThisKey="IDHINHANH" OtherKey="IDHINHANH" Type="HINHANH" IsForeignKey="true" />
-      <Association Name="THELOAIPHIM_PHIM" Member="THELOAIPHIM" ThisKey="IDLOAI" OtherKey="IDLOAI" Type="THELOAIPHIM" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
   <Table Name="dbo.THELOAIPHIM" Member="THELOAIPHIMs">
@@ -98,6 +75,26 @@
       <Column Name="HINHGIAVE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="LOAIPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="TENNBANGVE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHIM" Member="PHIMs">
+    <Type Name="PHIM">
+      <Column Name="IDCACBOPHIM" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GHICHU" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IDLOAI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NGDAYDANG" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IDTAIKHOANGTINVIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GIABAN" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GIAGIAM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TENPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NOIDUNGPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MAPHONG" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="XUATCHIEU" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VIDEOS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="HINHANHPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="THOILUONG" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="PHIM_KHUYENMAI" Member="KHUYENMAIs" ThisKey="IDCACBOPHIM" OtherKey="IDCACBOPHIM" Type="KHUYENMAI" />
+      <Association Name="THELOAIPHIM_PHIM" Member="THELOAIPHIM" ThisKey="IDLOAI" OtherKey="IDLOAI" Type="THELOAIPHIM" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
   <Function Name="dbo.PHIMANDTHEOAI" Method="PHIMANDTHEOAI">
