@@ -7,7 +7,35 @@ using System.Web.UI.WebControls;
 
 public partial class Admin_Phim_UpdatePhim : System.Web.UI.Page
 {
+    public static DataWebDataContext db = new DataWebDataContext();
+    public static long idPhim = 0;
     protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Request.QueryString["IdPhim"] != null && Request.QueryString["IdPhim"].ToString() != "")
+        {
+            long idPhim = Int32.Parse(Request.QueryString["IdPhim"]);
+            LoadPhim(idPhim);
+        }
+    }
+    void LoadPhim(long idInput)
+    {
+        var data = from q in db.PHIMs
+                   where q.IDCACBOPHIM == idInput
+                   select q;
+        if(data != null && data.Count()>0)
+        {
+            PHIM inforPhim = data.First();
+            txtTENPHIM.Text = inforPhim.TENPHIM;
+            lnbNgay.Text = txtNGAYDANG.SelectedDate.ToShortDateString();
+            txtXUATCHIEU.Text = inforPhim.XUATCHIEU;
+            txtTHOILUONG.Text = inforPhim.THOILUONG;
+            txtGIABAN.Text = inforPhim.GIABAN;
+            txtGIAGIAM.Text = inforPhim.GIAGIAM;
+            txtMAPHONG.Text = inforPhim.MAPHONG;
+            FCKNOIDUNGPHIM.Value = HttpUtility.HtmlDecode(inforPhim.NOIDUNGPHIM);
+        }
+    }
+    protected void btnCapNhat_Click(object sender, EventArgs e)
     {
 
     }

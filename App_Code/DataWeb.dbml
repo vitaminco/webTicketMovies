@@ -83,7 +83,6 @@
       <Column Name="GHICHU" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="IDLOAI" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NGDAYDANG" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="IDTAIKHOANGTINVIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="GIABAN" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="GIAGIAM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="TENPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />

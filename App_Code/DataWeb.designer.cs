@@ -1608,8 +1608,6 @@ public partial class PHIM : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private System.Nullable<System.DateTime> _NGDAYDANG;
 	
-	private System.Nullable<int> _IDTAIKHOANGTINVIEN;
-	
 	private string _GIABAN;
 	
 	private string _GIAGIAM;
@@ -1644,8 +1642,6 @@ public partial class PHIM : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnIDLOAIChanged();
     partial void OnNGDAYDANGChanging(System.Nullable<System.DateTime> value);
     partial void OnNGDAYDANGChanged();
-    partial void OnIDTAIKHOANGTINVIENChanging(System.Nullable<int> value);
-    partial void OnIDTAIKHOANGTINVIENChanged();
     partial void OnGIABANChanging(string value);
     partial void OnGIABANChanged();
     partial void OnGIAGIAMChanging(string value);
@@ -1753,26 +1749,6 @@ public partial class PHIM : INotifyPropertyChanging, INotifyPropertyChanged
 				this._NGDAYDANG = value;
 				this.SendPropertyChanged("NGDAYDANG");
 				this.OnNGDAYDANGChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDTAIKHOANGTINVIEN", DbType="Int")]
-	public System.Nullable<int> IDTAIKHOANGTINVIEN
-	{
-		get
-		{
-			return this._IDTAIKHOANGTINVIEN;
-		}
-		set
-		{
-			if ((this._IDTAIKHOANGTINVIEN != value))
-			{
-				this.OnIDTAIKHOANGTINVIENChanging(value);
-				this.SendPropertyChanging();
-				this._IDTAIKHOANGTINVIEN = value;
-				this.SendPropertyChanged("IDTAIKHOANGTINVIEN");
-				this.OnIDTAIKHOANGTINVIENChanged();
 			}
 		}
 	}

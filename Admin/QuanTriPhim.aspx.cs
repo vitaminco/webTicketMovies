@@ -40,7 +40,7 @@ public partial class QuanTriPhim : System.Web.UI.Page
         if (((LinkButton)e.CommandSource).CommandName == "UpdatePhim")
         {
             long idP = Convert.ToInt32(gridPhim.DataKeys[e.Item.ItemIndex].ToString());
-            Response.Redirect("UpdatePhim.aspx?IdPhim=" + idP.ToString());
+            Response.Redirect("./Phim/UpdatePhim.aspx?IdPhim=" + idP.ToString());
         }
         if (((LinkButton)e.CommandSource).CommandName == "DeletePhim")
         {

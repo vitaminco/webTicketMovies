@@ -4,26 +4,42 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>TRAN UPDATE PHIM</title>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
-        <a href="../../Bin/FredCK.FCKeditorV2.dll">FredCK.FCKeditorV2.dll</a></div>
-
         <h1>TRANG CẬP NHẬT PHIM</h1>
         <asp:Label ID="lnbTen" runat="server" Text="Nhập tên"></asp:Label>
-        <asp:TextBox ID="txtTENPHIM" runat="server"></asp:TextBox>
-        <asp:Label ID="Date" runat="server" Text="Nhập Ngày Đăng"></asp:Label>
-        <asp:Calendar ID="Datet" runat="server"></asp:Calendar>
-        <asp:Label ID="Label2" runat="server" Text="Chọn Hình Anh"></asp:Label>
-        <asp:FileUpload ID="fileHinhAnh" runat="server"></asp:FileUpload>
+        <asp:TextBox ID="txtTENPHIM" runat="server"></asp:TextBox> <br />
+
+        <asp:Label ID="lnbNgay" runat="server" Text="Nhập Ngày Đăng"></asp:Label>
+        <asp:Calendar ID="txtNGAYDANG" runat="server"></asp:Calendar> <br />
+
+        <asp:Label ID="lnbHinhAnh" runat="server" Text="Chọn Hình Anh"></asp:Label>
+        <asp:FileUpload ID="fileHINHANHPHIM" runat="server"></asp:FileUpload> <br />
         
-        <asp:Label ID="Label1" runat="server" Text="Nhập Xuất Chiếu"></asp:Label>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <asp:Label ID="Label3" runat="server" Text="Nhập Thời Lượng"></asp:Label>
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:Label ID="lnbXuatChieu" runat="server" Text="Nhập Xuất Chiếu"></asp:Label>
+        <asp:TextBox ID="txtXUATCHIEU" runat="server"></asp:TextBox> <<br />
+
+        <asp:Label ID="LNBThoiLuong" runat="server" Text="Nhập Thời Lượng"></asp:Label>
+        <asp:TextBox ID="txtTHOILUONG" runat="server"></asp:TextBox> <br />
+
+        <asp:Label ID="lnbGiaBan" runat="server" Text="Nhập giá bán"></asp:Label>
+        <asp:TextBox ID="txtGIABAN" runat="server"></asp:TextBox> <br />
+
+        <asp:Label ID="lnbGiaGiam" runat="server" Text="Nhập giá giảm"></asp:Label>
+        <asp:TextBox ID="txtGIAGIAM" runat="server"></asp:TextBox> <br />
+
+        <asp:Label ID="lnbMaPhong" runat="server" Text="Nhập mã phòng"></asp:Label>
+        <asp:TextBox ID="txtMAPHONG" runat="server"></asp:TextBox> <br />
+
+        <asp:Label ID="lnbVideo" runat="server" Text="Nhập giá giảm"></asp:Label>
+        <asp:FileUpload ID="fileVIDEO" runat="server"></asp:FileUpload> <br />
+
+        <asp:Label ID="lnbBoiDung" runat="server" Text="Nhập nội dung"></asp:Label>
+        <FCKeditorV2:FCKeditor ID="FCKNOIDUNGPHIM" runat="server" BasePath="~/fckeditor/" Height="400" Width="800"></FCKeditorV2:FCKeditor> <br />
+
+        <asp:Button ID="btnCapNhat" runat="server" OnClick="btnCapNhat_Click" />
     </form>
 </body>
 </html>
