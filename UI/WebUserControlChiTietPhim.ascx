@@ -24,8 +24,8 @@
             <div class="grid__colum-6">
                 <div class="introduct__phim">
                     <ul class="introduct__phim-list">
-                        <li class="introduct__phim-item"><%=inforPhim.GIABAN %></li>
-                        <li class="introduct__phim-item">Thể loại: Tâm lý,Hồi hộp</li>
+                        <li class="introduct__phim-item"> Gía bán: <%=inforPhim.GIABAN %></li>
+                        <li class="introduct__phim-item">Thể loại: <%=inforPhim.IDLOAI %></li>
                         <li class="introduct__phim-item">Khởi chiếu: <%=inforPhim.NGDAYDANG %></li>
                     </ul>
                     <span class="introduct__phim-contents">
@@ -41,11 +41,7 @@
             <!-- right -->
             <div class="grid__colum-4">
                 <div class="videos">
-                    <video src="./AssetInfor/Videos/Anh _3 Em - Cá nhân - Microsoft​ Edge 2022-11-09 14-10-45.mp4" width="100%" height="300" controls>
-                        Your browser does not support the
-                        <video>
-                            element.>
-                        </video>
+                     <img src='<%="./Asset/images/"+inforPhim.HINHANHPHIM %>' alt="" width="100%" height="600">
                 </div>
             </div>
         </div>

@@ -76,8 +76,9 @@ public partial class TrangChung : System.Web.UI.MasterPage
             if (dat != null && dat.Count() > 0)
             {
                 Session["USER"] = txtUSER.Text;
-                Session["PASS"] = txtPASS.Text;  
+                Session["PASS"] = txtPASS.Text;
                 Response.Redirect("Admin/QuanTriPhim.aspx");
+                ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Đăng nhập thành công!!')", true);
             }
             else
             {

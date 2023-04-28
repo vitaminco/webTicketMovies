@@ -1620,8 +1620,6 @@ public partial class PHIM : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private string _XUATCHIEU;
 	
-	private string _VIDEOS;
-	
 	private string _HINHANHPHIM;
 	
 	private string _THOILUONG;
@@ -1654,8 +1652,6 @@ public partial class PHIM : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnMAPHONGChanged();
     partial void OnXUATCHIEUChanging(string value);
     partial void OnXUATCHIEUChanged();
-    partial void OnVIDEOSChanging(string value);
-    partial void OnVIDEOSChanged();
     partial void OnHINHANHPHIMChanging(string value);
     partial void OnHINHANHPHIMChanged();
     partial void OnTHOILUONGChanging(string value);
@@ -1869,26 +1865,6 @@ public partial class PHIM : INotifyPropertyChanging, INotifyPropertyChanged
 				this._XUATCHIEU = value;
 				this.SendPropertyChanged("XUATCHIEU");
 				this.OnXUATCHIEUChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VIDEOS", DbType="NVarChar(MAX)")]
-	public string VIDEOS
-	{
-		get
-		{
-			return this._VIDEOS;
-		}
-		set
-		{
-			if ((this._VIDEOS != value))
-			{
-				this.OnVIDEOSChanging(value);
-				this.SendPropertyChanging();
-				this._VIDEOS = value;
-				this.SendPropertyChanged("VIDEOS");
-				this.OnVIDEOSChanged();
 			}
 		}
 	}

@@ -10,6 +10,7 @@ public partial class UI_WebUserControlChiTietPhim : System.Web.UI.UserControl
     public static DataWebDataContext db = new DataWebDataContext();
     
     public static PHIM inforPhim = new PHIM();
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Request.QueryString["IdNews"] != null && Request.QueryString["IdNews"].ToString() != "")

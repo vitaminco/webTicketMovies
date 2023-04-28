@@ -42,6 +42,7 @@ public partial class QuanTriPhim : System.Web.UI.Page
             long idP = Convert.ToInt32(gridPhim.DataKeys[e.Item.ItemIndex].ToString());
             Response.Redirect("./Phim/UpdatePhim.aspx?IdPhim=" + idP.ToString());
         }
+
         if (((LinkButton)e.CommandSource).CommandName == "DeletePhim")
         {
             long idP = Convert.ToInt32(gridPhim.DataKeys[e.Item.ItemIndex].ToString());

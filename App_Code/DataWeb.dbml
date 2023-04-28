@@ -89,7 +89,6 @@
       <Column Name="NOIDUNGPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="MAPHONG" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="XUATCHIEU" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="VIDEOS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="HINHANHPHIM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="THOILUONG" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Association Name="PHIM_KHUYENMAI" Member="KHUYENMAIs" ThisKey="IDCACBOPHIM" OtherKey="IDCACBOPHIM" Type="KHUYENMAI" />

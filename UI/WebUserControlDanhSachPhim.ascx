@@ -25,7 +25,7 @@
                             <div class="home-product-item">
                                
                                 <div class="home-product-item__img">
-                                    <img class="imgmain" src='<%="./Asset/images/"+listPhim[i].HINHANHPHIM %>' alt="" width="100%" height="300px">
+                                    <img class="imgmain" src='<%="./Asset/images/"+listPhim[i].HINHANHPHIM %>' alt="" width="100" height="300">
                                 </div>
                                
                                 <div class="home-product-item__infomation">
