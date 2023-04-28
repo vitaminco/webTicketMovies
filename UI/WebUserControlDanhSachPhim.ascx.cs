@@ -12,8 +12,15 @@ public partial class UI_WebUserControlDanhSachPhim : System.Web.UI.UserControl
     public static List<PHIM> listPhim = new List<PHIM>();
     protected void Page_Load(object sender, EventArgs e)
     {
-        LoadPhim();
-        LoadHinhAnh();
+        try
+        {
+            LoadPhim();
+            LoadHinhAnh();
+        }
+        catch (Exception ex)
+        {
+            Response.Redirect("./Error.aspx");
+        }
     }
     void LoadPhim()
     {

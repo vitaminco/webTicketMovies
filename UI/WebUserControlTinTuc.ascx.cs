@@ -11,11 +11,18 @@ public partial class UI_WebUserControlTinTuc : System.Web.UI.UserControl
     public static TINTUC inforTin = new TINTUC();
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Request.QueryString["IDTINTUC"] != null && Request.QueryString["IDTINTUC"].ToString() != "")
+        try
         {
-            long TINTUC = Int32.Parse(Request.QueryString["IDTINTUC"]);
-            LoadChiTietTin(TINTUC);
-        } 
+            if (Request.QueryString["IDTINTUC"] != null && Request.QueryString["IDTINTUC"].ToString() != "")
+            {
+                long TINTUC = Int32.Parse(Request.QueryString["IDTINTUC"]);
+                LoadChiTietTin(TINTUC);
+            }
+        }
+        catch (Exception ex)
+        {
+            Response.Redirect("./Error.aspx");
+        }
     }
     void LoadChiTietTin(long idInput)
     {

@@ -11,7 +11,14 @@ public partial class UI_WebUserControlGiaVe : System.Web.UI.UserControl
     public static List<GIAVE> listGiaVe = new List<GIAVE>();
     protected void Page_Load(object sender, EventArgs e)
     {
-        LoadGiaVe();
+        try
+        {
+            LoadGiaVe();
+        }
+        catch (Exception ex)
+        {
+            Response.Redirect("./Error.aspx");
+        }
     }
     void LoadGiaVe()
     {

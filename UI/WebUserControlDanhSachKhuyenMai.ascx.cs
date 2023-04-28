@@ -11,7 +11,14 @@ public partial class UI_WebUserControlDanhSachKhuyenMai : System.Web.UI.UserCont
     public static List<KHUYENMAI> listKhuyenMai = new List<KHUYENMAI>();
     protected void Page_Load(object sender, EventArgs e)
     {
-        LoadKhuyenMai();
+        try
+        {
+            LoadKhuyenMai();
+        }
+        catch (Exception ex)
+        {
+            Response.Redirect("./Error.aspx");
+        }
     }
     void LoadKhuyenMai()
     {

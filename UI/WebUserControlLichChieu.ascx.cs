@@ -11,7 +11,14 @@ public partial class UI_WebUserControlLichChieu : System.Web.UI.UserControl
     public static List<PHIM> listLichChieu = new List<PHIM>();
     protected void Page_Load(object sender, EventArgs e)
     {
-        LoadLichChieu();
+        try
+        {
+            LoadLichChieu();
+        }
+        catch (Exception ex)
+        {
+            Response.Redirect("./Error.aspx");
+        }
     }
     void LoadLichChieu()
     {

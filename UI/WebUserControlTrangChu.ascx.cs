@@ -15,11 +15,18 @@ public partial class UI_WebUserControlTrangChu : System.Web.UI.UserControl
     public static List<PHIMANDTHEOAIResult> listPhimAndLoai = new List<PHIMANDTHEOAIResult>();
     protected void Page_Load(object sender, EventArgs e)
     {
-        LoadHinh();
-        LoadPhim();
-        LoadKhuyenMai();
-        LoadTin();
-        LoadPhimAndLoai();
+        try
+        {
+            LoadHinh();
+            LoadPhim();
+            LoadKhuyenMai();
+            LoadTin();
+            LoadPhimAndLoai();
+        }
+        catch (Exception ex)
+        {
+            Response.Redirect("./Error.aspx");
+        }
     }
     void LoadHinh()
     {

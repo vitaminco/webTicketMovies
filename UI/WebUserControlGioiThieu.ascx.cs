@@ -11,7 +11,14 @@ public partial class UI_WebUserControlGioiThieu : System.Web.UI.UserControl
     public static List<GIOITHIEU> listGioiThieu = new List<GIOITHIEU>();
     protected void Page_Load(object sender, EventArgs e)
     {
-        LoadGioiThieu();
+        try
+        {
+            LoadGioiThieu();
+        }
+        catch (Exception ex)
+        {
+            Response.Redirect("./Error.aspx");
+        }
     }
     void LoadGioiThieu()
     {

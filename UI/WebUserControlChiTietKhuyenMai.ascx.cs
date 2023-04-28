@@ -11,10 +11,17 @@ public partial class UI_WebUserControlChiTietKhuyenMai : System.Web.UI.UserContr
     public static KHUYENMAI inforKhuyenMai = new KHUYENMAI();
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Request.QueryString["IdNews"] != null && Request.QueryString["IdNews"].ToString() != "")
+        try
         {
-            long IDKHKUYENMAI = Int32.Parse(Request.QueryString["IdNews"]);
-            LoadChiTietKhuyenMai(IDKHKUYENMAI);
+            if (Request.QueryString["IdNews"] != null && Request.QueryString["IdNews"].ToString() != "")
+            {
+                long IDKHKUYENMAI = Int32.Parse(Request.QueryString["IdNews"]);
+                LoadChiTietKhuyenMai(IDKHKUYENMAI);
+            }
+        }
+        catch (Exception ex)
+        {
+            Response.Redirect("./Error.aspx");
         }
     }
     void LoadChiTietKhuyenMai(long idInput)

@@ -11,7 +11,14 @@ public partial class UI_WebUserControlDieuKhoang : System.Web.UI.UserControl
     public static List<DIEUKHOANG> listDieuKhoang = new List<DIEUKHOANG>();
     protected void Page_Load(object sender, EventArgs e)
     {
-        LoadDieuKhoang();
+        try
+        {
+            LoadDieuKhoang();
+        }
+        catch (Exception ex)
+        {
+            Response.Redirect("./Error.aspx");
+        }
     }
     void LoadDieuKhoang()
     {

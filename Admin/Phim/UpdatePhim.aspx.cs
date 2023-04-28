@@ -63,6 +63,7 @@ public partial class Admin_Phim_UpdatePhim : System.Web.UI.Page
                 
                 db.SubmitChanges();
                 ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Cập nhật thành công')", true);
+                Response.Redirect("../QuanTriPhim.aspx");
             }
         }
     }

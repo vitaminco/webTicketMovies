@@ -13,10 +13,16 @@ public partial class UI_WebUserControlChiTietPhim : System.Web.UI.UserControl
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Request.QueryString["IdNews"] != null && Request.QueryString["IdNews"].ToString() != "")
+        try { 
+            if (Request.QueryString["IdNews"] != null && Request.QueryString["IdNews"].ToString() != "")
+            {
+                long IDPHIM = Int32.Parse(Request.QueryString["IdNews"]);
+                LoadChiTietPhimm(IDPHIM);
+            }
+        }
+        catch (Exception ex)
         {
-            long IDPHIM = Int32.Parse(Request.QueryString["IdNews"]);
-            LoadChiTietPhimm(IDPHIM);
+            Response.Redirect("./Error.aspx");
         }
     }
     void LoadChiTietPhimm(long idInput)

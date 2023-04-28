@@ -56,8 +56,8 @@ public partial class Admin_Phim_AddPhim : System.Web.UI.Page
                 }
                 db.PHIMs.InsertOnSubmit(inforPhim);
                 db.SubmitChanges();
-                
         ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Thêm mới thành công')", true);
+        Response.Redirect("../QuanTriPhim.aspx");
      }
         
     
