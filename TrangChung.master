@@ -103,6 +103,9 @@
     height: 500px;
     margin: 104px 0;
 }
+.suanhan{
+    width: 253px;
+}
     </style>
      
     <asp:ContentPlaceHolder id="head" runat="server">
