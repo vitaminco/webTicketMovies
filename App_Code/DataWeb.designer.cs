@@ -56,10 +56,13 @@ public partial class DataWebDataContext : System.Data.Linq.DataContext
   partial void InsertPHIM(PHIM instance);
   partial void UpdatePHIM(PHIM instance);
   partial void DeletePHIM(PHIM instance);
+  partial void InsertUSER(USER instance);
+  partial void UpdateUSER(USER instance);
+  partial void DeleteUSER(USER instance);
   #endregion
 	
 	public DataWebDataContext() : 
-			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["QLWEBTICKETMOVIESConnectionString1"].ConnectionString, mappingSource)
+			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["QLWEBTICKETMOVIESConnectionString2"].ConnectionString, mappingSource)
 	{
 		OnCreated();
 	}
@@ -157,6 +160,14 @@ public partial class DataWebDataContext : System.Data.Linq.DataContext
 		get
 		{
 			return this.GetTable<PHIM>();
+		}
+	}
+	
+	public System.Data.Linq.Table<USER> USERs
+	{
+		get
+		{
+			return this.GetTable<USER>();
 		}
 	}
 	
@@ -1986,6 +1997,116 @@ public partial class PHIM : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		this.SendPropertyChanging();
 		entity.PHIM = null;
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.USERS")]
+public partial class USER : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _ID;
+	
+	private string _USERNAMES;
+	
+	private string _PASSWORDS;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnUSERNAMESChanging(string value);
+    partial void OnUSERNAMESChanged();
+    partial void OnPASSWORDSChanging(string value);
+    partial void OnPASSWORDSChanged();
+    #endregion
+	
+	public USER()
+	{
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int ID
+	{
+		get
+		{
+			return this._ID;
+		}
+		set
+		{
+			if ((this._ID != value))
+			{
+				this.OnIDChanging(value);
+				this.SendPropertyChanging();
+				this._ID = value;
+				this.SendPropertyChanged("ID");
+				this.OnIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERNAMES", DbType="NVarChar(MAX)")]
+	public string USERNAMES
+	{
+		get
+		{
+			return this._USERNAMES;
+		}
+		set
+		{
+			if ((this._USERNAMES != value))
+			{
+				this.OnUSERNAMESChanging(value);
+				this.SendPropertyChanging();
+				this._USERNAMES = value;
+				this.SendPropertyChanged("USERNAMES");
+				this.OnUSERNAMESChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASSWORDS", DbType="NVarChar(MAX)")]
+	public string PASSWORDS
+	{
+		get
+		{
+			return this._PASSWORDS;
+		}
+		set
+		{
+			if ((this._PASSWORDS != value))
+			{
+				this.OnPASSWORDSChanging(value);
+				this.SendPropertyChanging();
+				this._PASSWORDS = value;
+				this.SendPropertyChanged("PASSWORDS");
+				this.OnPASSWORDSChanged();
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
 	}
 }
 

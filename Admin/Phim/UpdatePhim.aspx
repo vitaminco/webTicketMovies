@@ -7,6 +7,7 @@
     <title>TRANG UPDATE PHIM</title>
 </head>
 <body>
+    <a href="../QuanTriPhim.aspx">QUAY VỀ TRANG QUẢN TRỊ</a>
     <form id="form1" runat="server">
         <h1>TRANG CẬP NHẬT PHIM</h1>
         <asp:Label ID="lnbTen" runat="server" Text="Nhập tên"></asp:Label>
@@ -19,7 +20,7 @@
         <asp:FileUpload ID="fileHINHANHPHIM" runat="server"></asp:FileUpload> <br />
         
         <asp:Label ID="lnbXuatChieu" runat="server" Text="Nhập Xuất Chiếu"></asp:Label>
-        <asp:TextBox ID="txtXUATCHIEU" runat="server"></asp:TextBox> <<br />
+        <asp:TextBox ID="txtXUATCHIEU" runat="server"></asp:TextBox> <br />
 
         <asp:Label ID="LNBThoiLuong" runat="server" Text="Nhập Thời Lượng"></asp:Label>
         <asp:TextBox ID="txtTHOILUONG" runat="server"></asp:TextBox> <br />

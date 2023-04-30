@@ -7,6 +7,7 @@
     <title>TRAN UPDATE PHIM</title>
 </head>
 <body>
+    <a href="../QuanTriPhim.aspx">QUAY VỀ TRANG QUẢN TRỊ</a>
     <form id="form1" runat="server">
         <h1>THÊM PHIM</h1>
         <asp:Label ID="lnbTen" runat="server" Text="Nhập tên"></asp:Label>
@@ -19,7 +20,7 @@
         <asp:FileUpload ID="fileHINHANHPHIM" runat="server"></asp:FileUpload> <br />
         
         <asp:Label ID="lnbXuatChieu" runat="server" Text="Nhập Xuất Chiếu"></asp:Label>
-        <asp:TextBox ID="txtXUATCHIEU" runat="server"></asp:TextBox> <<br />
+        <asp:TextBox ID="txtXUATCHIEU" runat="server"></asp:TextBox> <br />
 
         <asp:Label ID="LNBThoiLuong" runat="server" Text="Nhập Thời Lượng"></asp:Label>
         <asp:TextBox ID="txtTHOILUONG" runat="server"></asp:TextBox> <br />
@@ -36,7 +37,7 @@
         <asp:Label ID="lnbBoiDung" runat="server" Text="Nhập nội dung"></asp:Label>
         <FCKeditorV2:FCKeditor ID="FCKNOIDUNGPHIM" runat="server" BasePath="~/fckeditor/" Height="400" Width="800"></FCKeditorV2:FCKeditor> <br />
 
-        <asp:Button ID="btnCapNhat" runat="server" Text="THÊM" OnClick="btnCapNhat_Click" />
+        <asp:Button ID="btnCapNhat" runat="server" Text="THÊM" OnClick="btnCapNhat_Click1" />
     </form>
 </body>
 </html>

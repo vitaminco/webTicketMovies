@@ -203,19 +203,7 @@
                                     <span>MEGA +</span>
                                 </div>
 
-                                <div class="dieukhoang">
-                                    <h1>ĐIỀU KIỆN ÁP DỤNG</h1>
-                                    <ul class="list__dieukhoang">
-                                        <li class="list__dieukhoang-item"> Xuất trình thẻ trước khi mua vé tại các quầy của Mega GS Cinemas.</li>
-                                        <li class="list__dieukhoang-item"> Thẻ thành viên Mega+ là tài sản của Mega GS Cinemas và không được chuyển nhượng.</li>
-                                        <li class="list__dieukhoang-item"> Mega GS Cinemas có quyền thay đổi các chương trình điểm thưởng mà không thông báo trước.</li>
-                                        <li class="list__dieukhoang-item"> Đăng ký làm thành viên tại website www.</li>Megagscinemas.</li>vn hoặc tại hệ thống cụm Rạp Mega GS.</li>
-                                        <li class="list__dieukhoang-item"> Nhận thẻ thành viên tại hệ thống Rạp Mega GS để có thể tích lũy/ đổi điểm khi giao dịch tại hệ thống Rạp Mega GS.</li>
-                                        <li class="list__dieukhoang-item"> Điểm tích lũy không có giá trị quy đổi thành tiền mặt.</li>
-                                        <li class="list__dieukhoang-item"> Các quyền lợi chỉ áp dụng cho chủ thẻ, Mega GS có thể yêu cầu thành viên xuất trình CMND/Thẻ căn cước hoặc các giấy tờ cần thiết để chứng minh chủ thẻ khi áp dụng các chính sách ưu đãi.</li>
-                                        <li class="list__dieukhoang-item"> Không áp dụng đổi điểm vào các ngày các ngày Lễ Tết.</li>
-                                    </ul>
-                                </div>
+                               
                             </div>
 
                             <div class="grid__colum-5">
@@ -224,66 +212,26 @@
                                     <div class="email__login">
                                         <form class="input__login" action="#" method="post">
 
-                                            <label style="display: block" for="email">Nhập Email</label>
-                                            <input type="email" id="email" name="email" />
+                                            <asp:label runat="server" Text="Nhập email">Nhập Email</asp:label>
+                                            <asp:TextBox  ID="USERNAME" runat="server"></asp:TextBox> <br/>
                                         </form>
                                         <form class="input__login" action="#" method="post">
 
-                                            <label style="display: block" for="pw">Nhập password</label> <br>
-                                            <input type="password" id="pw" name="pw" />
+                                             <asp:label runat="server" Text="Nhập mật khẩu"></asp:label>
+                                             <asp:TextBox  ID="PASSWORDS" runat="server" TextMode="Password"></asp:TextBox><br/>
                                         </form>
                                         <form class="input__login" action="#" method="post">
 
-                                            <label style="display: block" for="pw">Nhập lại password</label> <br>
-                                            <input type="password" id="pw" name="pw" />
+                                             <asp:label runat="server" Text="Nhập lại mật khẩu"></asp:label>
+                                             <asp:TextBox  ID="KT_PASSWORDS" runat="server" TextMode="Password"></asp:TextBox><br/>
                                         </form>
                                     </div>
                                 </div>
 
                                 <div class="person__info">
-                                    <h1>THÔNG TIN CÁ NHÂN</h1>
                                     <div class="person__write">
                                         <form action="" method="post">
-
-                                            <label style="display: block" for="your__name">Nhập Tên</label>
-                                            <input type="text" id="your__name" name="your__name" /> <br>
-
-                                            <label style="display: block;" for="last__name">Nhập họ</label>
-                                            <input type="tel" id="last__name" name="last__name" />
-                                        </form>
-                                        <form action="" method="post">
-
-                                            <label style="display: block" for="your__borndate">Nhập năm sinh</label>
-                                            <input type="date" id="your__borndate" name="your__borndate" />
-                                        </form>
-                                        <form action="" method="post">
-
-                                            <label style="display: block" for="sex">Giới tính</label>
-                                            <input type="checkbox" id="sex" name="sex" />
-                                            <span class="item__personal">Nam</span> <br>
-                                            <input type="checkbox" id="sex" name="sex" />
-                                            <span class="item__personal">Nữ</span> <br>
-                                            <input type="checkbox" id="sex" name="sex" />
-                                            <span class="item__personal">Không xác định</span>
-                                        </form>
-                                        <form action="" method="post">
-
-                                            <label style="display: block" for="your__phone">Nhập số điện thoại</label>
-                                            <input type="text" value="+84" id="your__phone" name="your__phone" />
-                                        </form>
-                                        <form action="" method="post">
-
-                                            <label style="display: block" for="your__addrest">Nhập địa chỉ</label>
-                                            <input type="text" id="your__addrest" name="your__addrest" />
-                                        </form>
-                                        <form action="" method="post">
-
-                                            <input type="checkbox" id="agree" name="agree" />
-                                            <span class="item__personal">Chấp nhận</span>
-                                        </form>
-                                        <form action="" method="post">
-
-                                            <button class="btn__signin">ĐĂNG KÝ</button>
+                                            <asp:button ID="btnDangKy" runat="server" Text="ĐĂNG KÝ" OnClick="btnDangKy_Click"/>
                                         </form>
                                     </div>
                                 </div>

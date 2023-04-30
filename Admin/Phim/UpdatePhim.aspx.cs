@@ -20,10 +20,10 @@ public partial class Admin_Phim_UpdatePhim : System.Web.UI.Page
             }
         }
     }
-    void LoadPhim(long idInput)
+    void LoadPhim(long idPhim)
     {
         var data = from q in db.PHIMs
-                   where q.IDCACBOPHIM == idInput
+                   where q.IDCACBOPHIM == idPhim
                    select q;
         if(data != null && data.Count()>0)
         {
@@ -60,7 +60,7 @@ public partial class Admin_Phim_UpdatePhim : System.Web.UI.Page
                     inforPhim.HINHANHPHIM = fileHINHANHPHIM.FileName;
                     fileHINHANHPHIM.SaveAs(Server.MapPath("\\Asset\\images\\") + fileHINHANHPHIM.FileName);
                 }
-                
+
                 db.SubmitChanges();
                 Response.Redirect("../QuanTriPhim.aspx");
                 ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Cập nhật thành công')", true);

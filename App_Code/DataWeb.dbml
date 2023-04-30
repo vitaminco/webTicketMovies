@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLWEBTICKETMOVIES" Class="DataWebDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-9SAS8HE\VITAMINCO;Initial Catalog=QLWEBTICKETMOVIES;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLWEBTICKETMOVIESConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-9SAS8HE\VITAMINCO;Initial Catalog=QLWEBTICKETMOVIES;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLWEBTICKETMOVIESConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CAUHINH" Member="CAUHINHs">
     <Type Name="CAUHINH">
       <Column Name="IDCAUHINH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -93,6 +93,13 @@
       <Column Name="THOILUONG" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Association Name="PHIM_KHUYENMAI" Member="KHUYENMAIs" ThisKey="IDCACBOPHIM" OtherKey="IDCACBOPHIM" Type="KHUYENMAI" />
       <Association Name="THELOAIPHIM_PHIM" Member="THELOAIPHIM" ThisKey="IDLOAI" OtherKey="IDLOAI" Type="THELOAIPHIM" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USERS" Member="USERs">
+    <Type Name="USER">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="USERNAMES" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PASSWORDS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.PHIMANDTHEOAI" Method="PHIMANDTHEOAI">
