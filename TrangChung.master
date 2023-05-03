@@ -143,7 +143,7 @@
                         <div class="grid__row">
                             <div class="grid__colum-5">
                                 <div class="card">
-                                    <img src="./AssetSL/IMGSL/card.png" alt="Danh thiép">
+                                    <img src="./AssetSL/IMGSL/card.png" alt="Danh thiép"/>
                                 </div>
                             </div>
 
@@ -153,14 +153,14 @@
                                     <asp:Label ID="lblError" runat="server" Text="Vui lòng nhập email và mật khẩu của bạn để đăng nhập!!!" ForeColor="red"></asp:Label> <br />
                                     
                                     <form class="form__login" action="" method="post">
-                                        <asp:label runat="server" Text="Nhập email"></asp:label>
+                                        <asp:label runat="server" Text="Nhập tên"></asp:label>
                                         <asp:TextBox  ID="txtUSER" runat="server"></asp:TextBox> <br/>
                                         <asp:label runat="server" Text="Nhập mật khẩu"></asp:label>
                                         <asp:TextBox  ID="txtPASS" runat="server" TextMode="Password"></asp:TextBox><br/>
 
                                         <div class="btn__password">
                                             <div class="btn__login">
-                                                <asp:button ID="btnDangNhap" runat="server" Text="ĐĂNG NHẬP" OnClick="btnDangNhap_Click"/>
+                                                <asp:button ID="btnDangNhap" runat="server" OnClientClick="return confirm('ĐĂNG NHẬP THÀNH CÔNG!!!!')" Text="ĐĂNG NHẬP" OnClick="btnDangNhap_Click"/>
                                             </div>
                                             <div class="forgot__password">
                                                 <a href="">Quên mật khẩu</a>
@@ -197,7 +197,7 @@
                         <div class="grid__row">
                             <div class="grid__colum-5">
                                 <div class="card">
-                                    <img src="./AssetSL/IMGSL/card.png" alt="Danh thiép">
+                                    <img src="./AssetSL/IMGSL/card.png" alt="Danh thiép"/>
                                 </div>
                                 <div class="name__card">
                                     <span>MEGA +</span>
@@ -208,33 +208,36 @@
 
                             <div class="grid__colum-5">
                                 <div class="info__lognin">
-                                    <h1>THÔNG TIN ĐĂNG NHẬP</h1>
+                                    <h1>THÔNG TIN ĐĂNG KÝ</h1>
+                                    
                                     <div class="email__login">
                                         <form class="input__login" action="#" method="post">
 
-                                            <asp:label runat="server" Text="Nhập email">Nhập Email</asp:label>
-                                            <asp:TextBox  ID="USERNAME" runat="server"></asp:TextBox> <br/>
-                                        </form>
-                                        <form class="input__login" action="#" method="post">
+                                            <asp:label runat="server" Text="Nhập tên">Nhập Tên</asp:label>
+                                            <asp:TextBox  ID="txtUSERNAMES" runat="server"></asp:TextBox> <br/>
 
                                              <asp:label runat="server" Text="Nhập mật khẩu"></asp:label>
-                                             <asp:TextBox  ID="PASSWORDS" runat="server" TextMode="Password"></asp:TextBox><br/>
+                                             <asp:TextBox  ID="txtPASSWORDS" runat="server" TextMode="Password"></asp:TextBox><br/>
+
+                                            <div class="person__info">
+                                                <div class="person__write">
+                                        
+                                            <asp:button ID="btnDangKy" runat="server" OnClientClick="return confirm('Bạn có muốn ĐĂNG KÝ KHÔNG ??')" Text="ĐĂNG KÝ" OnClick="btnDangKy_Click"/>
+                                        
+                                                </div>
+                                            </div>
                                         </form>
+                                        <!--
                                         <form class="input__login" action="#" method="post">
 
                                              <asp:label runat="server" Text="Nhập lại mật khẩu"></asp:label>
-                                             <asp:TextBox  ID="KT_PASSWORDS" runat="server" TextMode="Password"></asp:TextBox><br/>
+                                             <asp:TextBox  ID="txtKT_PASSWORDS" runat="server" TextMode="Password"></asp:TextBox><br/>
                                         </form>
+                                        -->
                                     </div>
                                 </div>
 
-                                <div class="person__info">
-                                    <div class="person__write">
-                                        <form action="" method="post">
-                                            <asp:button ID="btnDangKy" runat="server" Text="ĐĂNG KÝ" OnClick="btnDangKy_Click"/>
-                                        </form>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>

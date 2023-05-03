@@ -8,6 +8,8 @@ using System.Web.UI.WebControls;
 public partial class TrangChung : System.Web.UI.MasterPage
 {
     public static DataWebDataContext db = new DataWebDataContext();
+    public static long idUsers = 0;
+
    //phần master đổi logo, ten diachi, sdt, ...
     public static string strCopyLoGo = "";
     public static string strCopyTenRap = "";
@@ -19,6 +21,16 @@ public partial class TrangChung : System.Web.UI.MasterPage
         LoadTenRap();
         LoadSDT();
         LoadTenCongTy();
+
+        if (!IsPostBack)
+        {
+            if (Request.QueryString["IdPhim"] != null && Request.QueryString["IdPhim"].ToString() != "")
+            {
+                long idUses = Int32.Parse(Request.QueryString["IdPhim"]);
+                LoadUsers(idUsers);
+            }
+        }
+        
     }
     void LoadLoGo()
     {
@@ -90,8 +102,29 @@ public partial class TrangChung : System.Web.UI.MasterPage
             lblError.Text = "Đăng nhập không thành công";
         }
     }
+    //dăng kí
+    void LoadUsers(long idInput)
+    {
+        var data = from q in db.USERs
+                   where q.ID == idInput
+                   select q;
+        if (data != null && data.Count() > 0)
+        {
+            USER inforUsers = data.First();
+            txtUSERNAMES.Text = inforUsers.USERNAMES;
+            txtPASSWORDS.Text = inforUsers.PASSWORDS;
+            
+        }
+    }
     protected void btnDangKy_Click(object sender, EventArgs e)
     {
+        USER inforUsers = new USER();
+        inforUsers.USERNAMES = txtUSERNAMES.Text;
+        inforUsers.PASSWORDS = txtPASSWORDS.Text;
 
+        db.USERs.InsertOnSubmit(inforUsers);
+        db.SubmitChanges();
+        ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Thêm mới thành công')", true);
+        Response.Redirect("Error.aspx");
     }
 }

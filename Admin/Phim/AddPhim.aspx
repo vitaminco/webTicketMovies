@@ -37,7 +37,7 @@
         <asp:Label ID="lnbBoiDung" runat="server" Text="Nhập nội dung"></asp:Label>
         <FCKeditorV2:FCKeditor ID="FCKNOIDUNGPHIM" runat="server" BasePath="~/fckeditor/" Height="400" Width="800"></FCKeditorV2:FCKeditor> <br />
 
-        <asp:Button ID="btnCapNhat" runat="server" Text="THÊM" OnClick="btnCapNhat_Click1" />
+        <asp:Button ID="btnCapNhat" runat="server" OnClientClick="return confirm('Bạn có muốn thêmm phim này không')" Text="THÊM" OnClick="btnCapNhat_Click1" />
     </form>
 </body>
 </html>
