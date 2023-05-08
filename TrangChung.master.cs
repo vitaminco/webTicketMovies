@@ -8,7 +8,6 @@ using System.Web.UI.WebControls;
 public partial class TrangChung : System.Web.UI.MasterPage
 {
     public static DataWebDataContext db = new DataWebDataContext();
-    public static long idUsers = 0;
 
    //phần master đổi logo, ten diachi, sdt, ...
     public static string strCopyLoGo = "";
@@ -19,18 +18,10 @@ public partial class TrangChung : System.Web.UI.MasterPage
     {
         LoadLoGo();
         LoadTenRap();
+
         LoadSDT();
         LoadTenCongTy();
-
-        if (!IsPostBack)
-        {
-            if (Request.QueryString["IdPhim"] != null && Request.QueryString["IdPhim"].ToString() != "")
-            {
-                long idUses = Int32.Parse(Request.QueryString["IdPhim"]);
-                LoadUsers(idUsers);
-            }
-        }
-        
+         
     }
     void LoadLoGo()
     {
@@ -125,6 +116,6 @@ public partial class TrangChung : System.Web.UI.MasterPage
         db.TAIKHOANGs.InsertOnSubmit(inforUsers);
         db.SubmitChanges();
         ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Thêm mới thành công')", true);
-        Response.Redirect("Error.aspx");
+     //   Response.Redirect("Error.aspx");
     }
 }

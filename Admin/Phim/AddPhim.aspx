@@ -14,7 +14,7 @@
         <asp:TextBox ID="txtTENPHIM" runat="server"></asp:TextBox> <br />
 
         <asp:Label ID="lnbNgay" runat="server" Text="Nhập Ngày Đăng"></asp:Label>
-        <asp:Calendar ID="txtNGAYDANG" runat="server"></asp:Calendar> <br />
+        <asp:Calendar ID="txtNGAYDANG" runat="server" SelectionMode="DayWeekMonth" onselectionchanged="txtNGAYDANG_SelectionChanged"></asp:Calendar> <br />
 
         <asp:Label ID="lnbHinhAnh" runat="server" Text="Chọn Hình Ảnh"></asp:Label>
         <asp:FileUpload ID="fileHINHANHPHIM" runat="server"></asp:FileUpload> <br />

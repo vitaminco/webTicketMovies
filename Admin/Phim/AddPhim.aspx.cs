@@ -43,6 +43,7 @@ public partial class Admin_Phim_AddPhim : System.Web.UI.Page
        
                 PHIM inforPhim = new PHIM();
                 inforPhim.TENPHIM = txtTENPHIM.Text;
+                
                 inforPhim.XUATCHIEU = txtXUATCHIEU.Text;
                 inforPhim.THOILUONG = txtTHOILUONG.Text;
                 inforPhim.GIABAN = txtGIABAN.Text;
@@ -59,6 +60,10 @@ public partial class Admin_Phim_AddPhim : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Thêm mới thành công')", true);
         Response.Redirect("../QuanTriPhim.aspx");
      }
-        
-    
+
+
+    protected void txtNGAYDANG_SelectionChanged(object sender, EventArgs e)
+    {
+        lnbNgay.Text = txtNGAYDANG.SelectedDate.ToShortDateString();
+    }
 }

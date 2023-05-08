@@ -216,7 +216,7 @@
                                     <h1>THÔNG TIN ĐĂNG KÝ</h1>
                                     
                                     <div class="email__login">
-                                        <form class="input__login" action="#" method="post">
+                                        
 
                                             <asp:label runat="server" Text="Nhập tên">Nhập Tên</asp:label>
                                             <asp:TextBox  ID="txtUSERNAMES" runat="server"></asp:TextBox> <br/>
@@ -227,11 +227,11 @@
                                             <div class="person__info">
                                                 <div class="person__write">
                                         
-                                            <asp:button ID="btnDangKy" runat="server" OnClientClick="return confirm('Bạn có muốn ĐĂNG KÝ KHÔNG ??')" Text="ĐĂNG KÝ" OnClick="btnDangKy_Click"/>
+                                            <asp:Button ID="btnDangKy" runat="server" Text="ĐĂNG KÝ" OnClick="btnDangKy_Click"/>
                                         
                                                 </div>
                                             </div>
-                                        </form>
+                                       
                                         <!--
                                         <form class="input__login" action="#" method="post">
 
