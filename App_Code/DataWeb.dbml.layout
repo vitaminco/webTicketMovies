@@ -77,10 +77,10 @@
         <classShapeMoniker Id="a25fbf41-6c33-4a5c-83fa-86507a52f311" />
       </nodes>
     </associationConnector>
-    <classShape Id="5a7b9bd9-afad-417c-89cb-8caf8c771148" absoluteBounds="3.5, 0.5, 2, 1.3862939453125">
-      <DataClassMoniker Name="/DataWebDataContext/USER" />
+    <classShape Id="df2bf29a-1169-45c8-af25-7e0c9fc32a4e" absoluteBounds="10.75, 6.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataWebDataContext/TAIKHOANG" />
       <nestedChildShapes>
-        <elementListCompartment Id="e937ffcf-4191-4b37-8b75-dcad0e4a2d96" absoluteBounds="3.5149999999999997, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="4d73b00a-7a66-4927-8e70-d353cadc401b" absoluteBounds="10.765, 7.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

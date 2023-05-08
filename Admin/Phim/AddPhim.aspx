@@ -7,7 +7,7 @@
     <title>TRAN UPDATE PHIM</title>
 </head>
 <body>
-    <a href="../QuanTriPhim.aspx">QUAY VỀ TRANG QUẢN TRỊ</a>
+    <a href="../QuanTriPhim.aspx"> QUAY VỀ TRANG QUẢN TRỊ </a>
     <form id="form1" runat="server">
         <h1>THÊM PHIM</h1>
         <asp:Label ID="lnbTen" runat="server" Text="Nhập tên"></asp:Label>

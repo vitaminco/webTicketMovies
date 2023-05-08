@@ -77,12 +77,12 @@ public partial class TrangChung : System.Web.UI.MasterPage
     protected void btnDangNhap_Click(object sender, EventArgs e)
     {
         DataWebDataContext db = new DataWebDataContext();
-        var data = from q in db.USERs
+        var data = from q in db.TAIKHOANGs
                    where q.USERNAMES == txtUSER.Text
                    select q;
         if (data != null && data.Count() > 0)
         {
-            var dat = from t in db.USERs
+            var dat = from t in db.TAIKHOANGs
                       where t.PASSWORDS == txtPASS.Text
                       select t;
             if (dat != null && dat.Count() > 0)
@@ -105,12 +105,12 @@ public partial class TrangChung : System.Web.UI.MasterPage
     //dăng kí
     void LoadUsers(long idInput)
     {
-        var data = from q in db.USERs
+        var data = from q in db.TAIKHOANGs
                    where q.ID == idInput
                    select q;
         if (data != null && data.Count() > 0)
         {
-            USER inforUsers = data.First();
+            TAIKHOANG inforUsers = data.First();
             txtUSERNAMES.Text = inforUsers.USERNAMES;
             txtPASSWORDS.Text = inforUsers.PASSWORDS;
             
@@ -118,11 +118,11 @@ public partial class TrangChung : System.Web.UI.MasterPage
     }
     protected void btnDangKy_Click(object sender, EventArgs e)
     {
-        USER inforUsers = new USER();
+        TAIKHOANG inforUsers = new TAIKHOANG();
         inforUsers.USERNAMES = txtUSERNAMES.Text;
         inforUsers.PASSWORDS = txtPASSWORDS.Text;
 
-        db.USERs.InsertOnSubmit(inforUsers);
+        db.TAIKHOANGs.InsertOnSubmit(inforUsers);
         db.SubmitChanges();
         ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Thêm mới thành công')", true);
         Response.Redirect("Error.aspx");

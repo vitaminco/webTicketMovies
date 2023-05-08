@@ -20,10 +20,10 @@ public partial class Admin_Phim_UpdatePhim : System.Web.UI.Page
             }
         }
     }
-    void LoadPhim(long idPhim)
+    void LoadPhim(long idInput)
     {
         var data = from q in db.PHIMs
-                   where q.IDCACBOPHIM == idPhim
+                   where q.IDCACBOPHIM == idInput
                    select q;
         if(data != null && data.Count()>0)
         {
@@ -40,15 +40,17 @@ public partial class Admin_Phim_UpdatePhim : System.Web.UI.Page
     }
     protected void btnCapNhat_Click(object sender, EventArgs e)
     {
-        if (txtTENPHIM.Text != "")
+        if ( txtTENPHIM.Text != "")
         {
-            var data = from q in db.PHIMs
-                       where q.IDCACBOPHIM == idPhim
-                       select q;
+            idPhim = Int32.Parse(Request.QueryString["IdPhim"]);
+            var data = from T in db.PHIMs
+                       where T.IDCACBOPHIM == idPhim
+                       select T;
             if (data != null && data.Count() > 0)
             {
                 PHIM inforPhim = data.First();
                 inforPhim.TENPHIM = txtTENPHIM.Text;
+                lnbNgay.Text = txtNGAYDANG.SelectedDate.ToShortDateString();
                 inforPhim.XUATCHIEU = txtXUATCHIEU.Text;
                 inforPhim.THOILUONG = txtTHOILUONG.Text;
                 inforPhim.GIABAN = txtGIABAN.Text;
@@ -60,11 +62,10 @@ public partial class Admin_Phim_UpdatePhim : System.Web.UI.Page
                     inforPhim.HINHANHPHIM = fileHINHANHPHIM.FileName;
                     fileHINHANHPHIM.SaveAs(Server.MapPath("\\Asset\\images\\") + fileHINHANHPHIM.FileName);
                 }
-
-                db.SubmitChanges();
-                Response.Redirect("../QuanTriPhim.aspx");
-                ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Cập nhật thành công')", true);
                 
+                db.SubmitChanges();
+                ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Cập nhật thành công')", true);
+                Response.Redirect("../QuanTriPhim.aspx");
             }
         }
     }

@@ -215,7 +215,8 @@
                                      <p class="infor">
                                         <i class="fa-sharp fa-solid fa-play"></i>
                                          NỘI DUNG: 
-                                        <%=listPhim[i].NOIDUNGPHIM %>
+                                            <%=HttpUtility.HtmlDecode(listPhim[i].NOIDUNGPHIM) %>
+                                        
                                     </p>
                                 </div>
                             </div>

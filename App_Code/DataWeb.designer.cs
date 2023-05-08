@@ -56,9 +56,9 @@ public partial class DataWebDataContext : System.Data.Linq.DataContext
   partial void InsertPHIM(PHIM instance);
   partial void UpdatePHIM(PHIM instance);
   partial void DeletePHIM(PHIM instance);
-  partial void InsertUSER(USER instance);
-  partial void UpdateUSER(USER instance);
-  partial void DeleteUSER(USER instance);
+  partial void InsertTAIKHOANG(TAIKHOANG instance);
+  partial void UpdateTAIKHOANG(TAIKHOANG instance);
+  partial void DeleteTAIKHOANG(TAIKHOANG instance);
   #endregion
 	
 	public DataWebDataContext() : 
@@ -163,11 +163,11 @@ public partial class DataWebDataContext : System.Data.Linq.DataContext
 		}
 	}
 	
-	public System.Data.Linq.Table<USER> USERs
+	public System.Data.Linq.Table<TAIKHOANG> TAIKHOANGs
 	{
 		get
 		{
-			return this.GetTable<USER>();
+			return this.GetTable<TAIKHOANG>();
 		}
 	}
 	
@@ -2000,8 +2000,8 @@ public partial class PHIM : INotifyPropertyChanging, INotifyPropertyChanged
 	}
 }
 
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.USERS")]
-public partial class USER : INotifyPropertyChanging, INotifyPropertyChanged
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TAIKHOANG")]
+public partial class TAIKHOANG : INotifyPropertyChanging, INotifyPropertyChanged
 {
 	
 	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -2024,7 +2024,7 @@ public partial class USER : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnPASSWORDSChanged();
     #endregion
 	
-	public USER()
+	public TAIKHOANG()
 	{
 		OnCreated();
 	}

@@ -16,7 +16,7 @@
         <br />
         <a href="Phim/AddPhim.aspx">Thêm mới phim</a>
         <a href="../TrangChu.aspx">QUAY VỀ TRANG CHỦ</a>
-        <asp:DataGrid ID="gridPhim" runat="server" AllowCustomPaging="true" PageSize ="2" PagerStyle-Mode="NumericPages" AutoGenerateColumns="false" DataKeyField="IDCACBOPHIM" OnItemCommand="gridPhim_ItemCommand" OnPageIndexChanged="gridPhim_PageIndexChanged">
+        <asp:DataGrid ID="gridPhim" runat="server" AllowCustomPaging="true" PageSize ="20" PagerStyle-Mode="NumericPages" AutoGenerateColumns="false" DataKeyField="IDCACBOPHIM" OnItemCommand="gridPhim_ItemCommand" OnPageIndexChanged="gridPhim_PageIndexChanged">
 
             <Columns>
                 <asp:TemplateColumn>
@@ -94,7 +94,7 @@
             <Columns>
                 <asp:TemplateColumn>
                     <ItemTemplate>
-                        <asp:LinkButton ID="lbnCapNhat" runat="server" Text="CẬP NHẬT" CommandName="UpdatePhim" OnClientClick="Bạn có muốn Update không" ForeColor="Blue"></asp:LinkButton> <br />
+                        <asp:LinkButton ID="lbnCapNhat" runat="server" Text="CẬP NHẬT" CommandName="UpdatePhim" OnClientClick="Bạn có muốn Update không" ForeColor="Blue"></asp:LinkButton> 
                         <asp:LinkButton ID="lbnXoa" runat="server" Text="XÓA" CommandName="DeletePhim" OnClientClick="return confirm('Bạn có muốn Xóa phim này không')" ForeColor="red"></asp:LinkButton>
                         
                     </ItemTemplate>

@@ -95,8 +95,8 @@
       <Association Name="THELOAIPHIM_PHIM" Member="THELOAIPHIM" ThisKey="IDLOAI" OtherKey="IDLOAI" Type="THELOAIPHIM" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
-  <Table Name="dbo.USERS" Member="USERs">
-    <Type Name="USER">
+  <Table Name="dbo.TAIKHOANG" Member="TAIKHOANGs">
+    <Type Name="TAIKHOANG">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="USERNAMES" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="PASSWORDS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
