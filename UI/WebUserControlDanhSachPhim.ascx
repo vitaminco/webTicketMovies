@@ -25,16 +25,10 @@
                             <div class="home-product-item">
                                
                                 <div class="home-product-item__img">
-                                    <img class="imgmain" src='<%="./Asset/images/"+listPhim[i].HINHANHPHIM %>' alt="" width="100" height="300">
+                                    <img class="imgmain" src='<%="./Asset/images/"+listPhim[i].HINHANHPHIM %>' alt="" width="100%" height="300">
                                 </div>
                                
-                                <div class="home-product-item__infomation">
-                                    <h4 class="home-product-item__name"><%=listPhim[i].TENPHIM %></h4>
-                                    <p class="infor">
-                                        <i class="fa-sharp fa-solid fa-play"></i>
-                                        <%=listPhim[i].NOIDUNGPHIM %>
-                                    </p>
-                                </div>
+                               
                             </div>
                         </div>
                     </a>
@@ -45,9 +39,11 @@
                                 <li class="container__movies-content__list-item">Thời lượng: 11 phút</li>
                                 <li class="container__movies-content__list-item">Thể loại: Tâm lý</li>
                                 <li class="container__movies-content__list-item">Khởi chiếu: <%=listPhim[i].NGDAYDANG %></li>
-                                <li class="container__movies-content__list-item">Nội dung: <%=listPhim[i].NOIDUNGPHIM %></li>
+                                <li class="container__movies-content__list-item">Nội dung: <%=HttpUtility.HtmlDecode(listPhim[i].NOIDUNGPHIM) %></li>
                             
                             </ul>
+                            
+                            <div class="twobutton">
                             <div class="container__movies-like">
                                 <a href="#">
                                     <i class="fa-sharp fa-solid fa-cart-shopping"></i>
@@ -59,6 +55,7 @@
                                     <i class="fa-sharp fa-solid fa-heart"></i>
                                     Lovely 0
                                 </a>
+                            </div>
                             </div>
                         </div>
                         

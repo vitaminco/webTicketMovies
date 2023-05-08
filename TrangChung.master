@@ -111,6 +111,11 @@
     font-size:1.6rem;
     font-weight:600;
 }
+.twobutton{
+    display: flex;
+    margin: 45px 0;
+    width: 149px;
+}
     </style>
      
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -224,6 +229,9 @@
                                              <asp:label runat="server" Text="Nhập mật khẩu"></asp:label>
                                              <asp:TextBox  ID="txtPASSWORDS" runat="server" TextMode="Password"></asp:TextBox><br/>
 
+                                               <asp:label runat="server" Text="Nhập lại mật khẩu"></asp:label>
+                                             <asp:TextBox  ID="txtKT_PASSWORDS" runat="server" TextMode="Password"></asp:TextBox><br/>
+
                                             <div class="person__info">
                                                 <div class="person__write">
                                         
@@ -231,14 +239,7 @@
                                         
                                                 </div>
                                             </div>
-                                       
-                                        <!--
-                                        <form class="input__login" action="#" method="post">
 
-                                             <asp:label runat="server" Text="Nhập lại mật khẩu"></asp:label>
-                                             <asp:TextBox  ID="txtKT_PASSWORDS" runat="server" TextMode="Password"></asp:TextBox><br/>
-                                        </form>
-                                        -->
                                     </div>
                                 </div>
 

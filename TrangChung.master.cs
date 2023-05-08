@@ -109,13 +109,19 @@ public partial class TrangChung : System.Web.UI.MasterPage
     }
     protected void btnDangKy_Click(object sender, EventArgs e)
     {
-        TAIKHOANG inforUsers = new TAIKHOANG();
-        inforUsers.USERNAMES = txtUSERNAMES.Text;
-        inforUsers.PASSWORDS = txtPASSWORDS.Text;
+        if (txtPASSWORDS.Text == txtKT_PASSWORDS.Text)
+        {
+            TAIKHOANG inforUsers = new TAIKHOANG();
+            inforUsers.USERNAMES = txtUSERNAMES.Text;
+            inforUsers.PASSWORDS = txtPASSWORDS.Text;
 
-        db.TAIKHOANGs.InsertOnSubmit(inforUsers);
-        db.SubmitChanges();
-        ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Thêm mới thành công')", true);
-     //   Response.Redirect("Error.aspx");
+            db.TAIKHOANGs.InsertOnSubmit(inforUsers);
+            db.SubmitChanges();
+            ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Thêm mới thành công')", true);
+        }
+        else
+        {
+            ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('VUI LÒNG NHẬP LẠI')", true);
+        }
     }
 }

@@ -32,7 +32,9 @@
                                     <span><%=listKhuyenMai[i].CHUDEKHUYENMAI %></span>
                                 </div>
                             </a>
-                            <span>Thời gian ưu đãi: <%=listKhuyenMai[i].NGAYBANHANH %> - <%=listKhuyenMai[i].NGAYKETTHUC %></span>
+                            <span>
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                                Thời gian ưu đãi: <%=listKhuyenMai[i].NGAYBANHANH %> - <%=listKhuyenMai[i].NGAYKETTHUC %></span>
                             <span class="container__evens-link-nhan"><%=listKhuyenMai[i].MUCUUDAI %></span>
                         </div>
                     <%} %>

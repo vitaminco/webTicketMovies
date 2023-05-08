@@ -20,6 +20,7 @@
             <h1><b>LỊCH CHIẾU</b></h1>
         </div>
         <br>
+       <div class="listLich">
        <%for(int i=0; i<listLichChieu.Count; i++){ %>
         <a href='<%="ChiTietPhim.aspx?IdNews="+listLichChieu[i].IDCACBOPHIM.ToString() %>' class="lichchieu">
             <div class="name__phim">
@@ -36,18 +37,18 @@
                             <li class="introduct__phim-item">Khởi chiếu:  <%=listLichChieu[i].NGDAYDANG %></li>
                         </ul>
                         <span class="introduct__phim-contents">
-                            <%=listLichChieu[i].NOIDUNGPHIM %>
+                            <%=HttpUtility.HtmlDecode(listLichChieu[i].NOIDUNGPHIM) %>
                         </span>
                     </div>
                 </div>
                 <!-- right -->
                 <div class="grid__colum-4">
                     <div class="buy__img">
-                       <img src='<%="./Asset/images/"+listLichChieu[i].HINHANHPHIM %>' alt="">
+                       <img src='<%="./Asset/images/"+listLichChieu[i].HINHANHPHIM %>' alt="" width="300" height="500">
                     </div>
                 </div>
             </div>
         </a>
         <%} %>
-        
+        </div>
     </div>

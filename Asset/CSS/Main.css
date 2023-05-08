@@ -155,6 +155,19 @@
         transform: scale(1);
     }
 }
+.buy__img{
+    width: 100%;
+    height: 300px;
+}
+.listLich a{
+    color: var(--black-color);
+    font-weight:600;
+    text-decoration:none;
+}
+.listLich a:hover{
+    color: var(--black-color);
+    text-decoration:none;
+}
 /* mui nhon */
 .notifi__contain::before{
     content: "";

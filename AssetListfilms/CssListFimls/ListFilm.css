@@ -75,6 +75,8 @@
 }
 .container__movies-like a{
     color: var(--white-color);
+    display: block;
+    width: 73px;
 }
 .container__movies-love{
     background-color: red;
