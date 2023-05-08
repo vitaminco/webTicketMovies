@@ -65,6 +65,7 @@ public partial class TrangChung : System.Web.UI.MasterPage
             strCopyTenCT = data.First().GIATRI;
         }
     }
+    //dăng nhập
     protected void btnDangNhap_Click(object sender, EventArgs e)
     {
         DataWebDataContext db = new DataWebDataContext();
@@ -76,21 +77,30 @@ public partial class TrangChung : System.Web.UI.MasterPage
             var dat = from t in db.TAIKHOANGs
                       where t.PASSWORDS == txtPASS.Text
                       select t;
-            if (dat != null && dat.Count() > 0)
+            if (dat != null && dat.Count() > 0 && txtPASS.Text == txtCF_PASS.Text)
             {
+               
                 Session["USERNAMES"] = txtUSER.Text;
                 Session["PASSWORDS"] = txtPASS.Text;
-                Response.Redirect("Admin/QuanTriPhim.aspx");
+                if (txtUSER.Text == "Admin" && txtPASS.Text == "123456")
+                {
+                    Response.Redirect("Admin/QuanTriPhim.aspx");
+                }
+                else {
+                    Response.Redirect("TrangChu.aspx");
+                }
                 ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Đăng nhập thành công!!')", true);
             }
             else
             {
                 lblError.Text = "Đăng nhập không thành công, thông tin không chính xác";
+                ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Đăng nhập không thành công, thông tin không chính xác!!')", true);
             }
         }
         else
         {
             lblError.Text = "Đăng nhập không thành công";
+            ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Đăng nhập không thành công, thông tin không chính xác!!')", true);
         }
     }
     //dăng kí

@@ -165,12 +165,16 @@
                                     <form class="form__login" action="" method="post">
                                         <asp:label runat="server" Text="Nhập tên"></asp:label>
                                         <asp:TextBox  ID="txtUSER" runat="server"></asp:TextBox> <br/>
+
                                         <asp:label runat="server" Text="Nhập mật khẩu"></asp:label>
                                         <asp:TextBox  ID="txtPASS" runat="server" TextMode="Password"></asp:TextBox><br/>
 
+                                        <asp:label runat="server" Text="Nhập lại mật khẩu"></asp:label>
+                                        <asp:TextBox  ID="txtCF_PASS" runat="server" TextMode="Password"></asp:TextBox><br/>
+
                                         <div class="btn__password">
                                             <div class="btn__login">
-                                                <asp:button ID="btnDangNhap" runat="server" OnClientClick="return confirm('ĐĂNG NHẬP THÀNH CÔNG!!!!')" Text="ĐĂNG NHẬP" OnClick="btnDangNhap_Click"/>
+                                                <asp:button ID="btnDangNhap" runat="server" Text="ĐĂNG NHẬP" OnClick="btnDangNhap_Click"/>
                                             </div>
                                             <div class="forgot__password">
                                                 <a href="">Quên mật khẩu</a>
@@ -229,7 +233,7 @@
                                              <asp:label runat="server" Text="Nhập mật khẩu"></asp:label>
                                              <asp:TextBox  ID="txtPASSWORDS" runat="server" TextMode="Password"></asp:TextBox><br/>
 
-                                               <asp:label runat="server" Text="Nhập lại mật khẩu"></asp:label>
+                                             <asp:label runat="server" Text="Nhập lại mật khẩu"></asp:label>
                                              <asp:TextBox  ID="txtKT_PASSWORDS" runat="server" TextMode="Password"></asp:TextBox><br/>
 
                                             <div class="person__info">
