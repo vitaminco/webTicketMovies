@@ -37,9 +37,9 @@
                             <a href="" ><%=listPhim[i].TENPHIM %></a>
                             <ul class="container__movies-list">
                                 <li class="container__movies-content__list-item">Thời lượng: 11 phút</li>
-                                <li class="container__movies-content__list-item">Thể loại: Tâm lý</li>
+                                <li class="container__movies-content__list-item">Thể loại: <%=listPhim[i].XUATCHIEU %></li>
                                 <li class="container__movies-content__list-item">Khởi chiếu: <%=listPhim[i].NGDAYDANG %></li>
-                                <li class="container__movies-content__list-item">Nội dung: <%=HttpUtility.HtmlDecode(listPhim[i].NOIDUNGPHIM) %></li>
+                                <li class="container__movies-content__list-item container__movies-content__list-item-content">Nội dung: <%=HttpUtility.HtmlDecode(listPhim[i].NOIDUNGPHIM) %></li>
                             
                             </ul>
                             

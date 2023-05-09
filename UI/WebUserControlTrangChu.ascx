@@ -205,19 +205,14 @@
                                      <p class="infor">
                                         <i class="fa-sharp fa-solid fa-play"></i>
                                          THỂ LOẠI: 
-                                        <%=listPhim[i].THELOAIPHIM %>
+                                        <%=listPhim[i].XUATCHIEU %>
                                     </p>
                                     <p class="infor">
                                         <i class="fa-sharp fa-solid fa-play"></i>
                                          GIÁ BÁN: 
                                         <%=listPhim[i].GIABAN %>
                                     </p>
-                                     <p class="infor">
-                                        <i class="fa-sharp fa-solid fa-play"></i>
-                                         NỘI DUNG: 
-                                            <%=HttpUtility.HtmlDecode(listPhim[i].NOIDUNGPHIM) %>
-                                        
-                                    </p>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -245,7 +240,7 @@
                     <div class="grid__colum-6">
                         <div class="grid__colum-6--uudai">
                             <span class="grid__colum-6--item-one">ƯU ĐÃI</span>
-                            <a href="./indexGT.html" class="grid__colum-6--item">Xem tất cả</a>
+                            
                         </div>
                         <div class="grid__colum-6--poster">
                             <img src="./Asset/images/mgs-lixi.jpg" alt="">
@@ -313,7 +308,7 @@
                         <!-- evens -->
                         <div class="evens">
                             <div class="evens__heading">
-                                <h1>SỰ KIỆN</h1>
+                                <h1>THÔNG BÁO</h1>
                                 <a href="./indexGT.html">Xem tất cả</a>
                             </div>
 

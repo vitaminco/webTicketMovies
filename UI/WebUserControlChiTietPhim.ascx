@@ -25,11 +25,11 @@
                 <div class="introduct__phim">
                     <ul class="introduct__phim-list">
                         <li class="introduct__phim-item"> Gía bán: <%=inforPhim.GIABAN %></li>
-                        <li class="introduct__phim-item">Thể loại: <%=inforPhim.IDLOAI %></li>
+                        <li class="introduct__phim-item">Thể loại: <%=inforPhim.XUATCHIEU %></li>
                         <li class="introduct__phim-item">Khởi chiếu: <%=inforPhim.NGDAYDANG %></li>
                     </ul>
                     <span class="introduct__phim-contents">
-                        <%=inforPhim.NOIDUNGPHIM %>
+                        <%=HttpUtility.HtmlDecode(inforPhim.NOIDUNGPHIM) %>
                     </span>
                     <div class="telecommunication">
                         <a href="https://www.facebook.com/"><img src="./AssetInfor/ImgInforFilm/fb.jpg" alt=""></a>

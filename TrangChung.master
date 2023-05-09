@@ -116,6 +116,15 @@
     margin: 45px 0;
     width: 149px;
 }
+.container__movies-content__list-item-content{
+    line-height: 2rem;
+    padding: 5px 0;
+    overflow-y: scroll;
+    max-height: 107px;
+}
+.infor-content{
+
+}
     </style>
      
     <asp:ContentPlaceHolder id="head" runat="server">
