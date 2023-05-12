@@ -125,6 +125,16 @@
 .infor-content{
 
 }
+.header__navbar--item a{
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.header__navbar--item a i{
+    background: #fff;
+    padding: 4px;
+    border-radius: 50px;
+    color: var(--boder-color);
+}
     </style>
      
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -284,7 +294,7 @@
                             </header>
 
                             <a href="#" class="notifi__body">
-                                <img src="./Asset/images/vongnhi.jpg" alt="">
+                                <img src="./Asset/images/vongnhi.jpg" alt=""/>
                                 <span>CÔ DÂU 8 TUỔI</span>
                             </a>
 
@@ -307,8 +317,18 @@
 
                         </div>
                     </li>
-                    <li class="header__navbar--item"><button class="header__navbar--item--link header__navbar--item--link-signin" onclick="hienthiDK();">ĐĂNG KÍ</button></li>
-                    <li class="header__navbar--item"><button class="header__navbar--item--link header__navbar--item--link-login" onclick="hienthiDN();">ĐĂNG NHẬP</button></li>
+                    <%
+                        if ((Boolean)Session["USERNAMES"] == false) { 
+                         %>
+                            <li class="header__navbar--item"><button class="header__navbar--item--link header__navbar--item--link-signin" onclick="hienthiDK();">ĐĂNG KÍ</button></li>
+                            <li class="header__navbar--item"><button class="header__navbar--item--link header__navbar--item--link-login" onclick="hienthiDN();">ĐĂNG NHẬP</button></li> 
+                        <%}else{
+                            %>
+                            <li class="header__navbar--item"><a href="logout.aspx">
+                                <i class="fa-solid fa-user"></i>
+                                ĐĂNG XUẤT</a></li>
+                            
+                        <%} %>
                 </ul>
             </nav>
 

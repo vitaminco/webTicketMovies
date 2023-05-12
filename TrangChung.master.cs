@@ -84,9 +84,11 @@ public partial class TrangChung : System.Web.UI.MasterPage
                 Session["PASSWORDS"] = txtPASS.Text;
                 if (txtUSER.Text == "Admin" && txtPASS.Text == "123456")
                 {
+                    Session["USERNAMES"] = true;
                     Response.Redirect("Admin/QuanTriPhim.aspx");
                 }
                 else {
+                    Session["USERNAMES"] = true;
                     Response.Redirect("TrangChu.aspx");
                 }
                 ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Đăng nhập thành công!!')", true);
@@ -94,6 +96,10 @@ public partial class TrangChung : System.Web.UI.MasterPage
             else
             {
                 lblError.Text = "Đăng nhập không thành công, thông tin không chính xác";
+                //cho nó quay về ô tróng
+                txtUSER.Text = "";
+                txtPASS.Text = "";
+                txtUSER.Focus();
                 ScriptManager.RegisterStartupScript(this, typeof(string), "Message", "alert('Đăng nhập không thành công, thông tin không chính xác!!')", true);
             }
         }
