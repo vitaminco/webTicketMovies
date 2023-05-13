@@ -43,7 +43,7 @@ public partial class Admin_Phim_AddPhim : System.Web.UI.Page
        
                 PHIM inforPhim = new PHIM();
                 inforPhim.TENPHIM = txtTENPHIM.Text;
-                
+                inforPhim.NGDAYDANG = txtNGAYDANG.SelectedDate;
                 inforPhim.XUATCHIEU = txtXUATCHIEU.Text;
                 inforPhim.THOILUONG = txtTHOILUONG.Text;
                 inforPhim.GIABAN = txtGIABAN.Text;

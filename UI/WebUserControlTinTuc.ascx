@@ -3,7 +3,7 @@
             <div class="container__SL">
                 <div class="trangchu">
                     <div class="left">
-                        <a href="./Index.html">Trang chủ</a>
+                        <a href="./TrangChu.aspx">Trang chủ</a>
                         <i class="fa-sharp fa-solid fa-chevron-right"></i>
                         <span>Thông Tin</span>
                     </div>

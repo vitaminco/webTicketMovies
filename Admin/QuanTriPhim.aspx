@@ -23,6 +23,8 @@
             <br />
             <a href="Phim/AddPhim.aspx">Thêm mới phim</a>
             <a href="../TrangChu.aspx">QUAY VỀ TRANG CHỦ</a> <br /> <br />
+            <a href="QuanTriTaiKhoang.aspx">TRANG QUẢN TRỊ USERS</a>  <br /> <br />
+
         </div>
         <asp:DataGrid ID="gridPhim" border="6" style="text-align:center" runat="server" AllowCustomPaging="true" PageSize ="20" PagerStyle-Mode="NumericPages" AutoGenerateColumns="false" DataKeyField="IDCACBOPHIM" OnItemCommand="gridPhim_ItemCommand" OnPageIndexChanged="gridPhim_PageIndexChanged">
 

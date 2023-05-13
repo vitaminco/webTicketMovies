@@ -50,7 +50,7 @@ public partial class Admin_Phim_UpdatePhim : System.Web.UI.Page
             {
                 PHIM inforPhim = data.First();
                 inforPhim.TENPHIM = txtTENPHIM.Text;
-                lnbNgay.Text = txtNGAYDANG.SelectedDate.ToShortDateString();
+                inforPhim.NGDAYDANG = txtNGAYDANG.SelectedDate;
                 inforPhim.XUATCHIEU = txtXUATCHIEU.Text;
                 inforPhim.THOILUONG = txtTHOILUONG.Text;
                 inforPhim.GIABAN = txtGIABAN.Text;
@@ -68,5 +68,9 @@ public partial class Admin_Phim_UpdatePhim : System.Web.UI.Page
                 Response.Redirect("../QuanTriPhim.aspx");
             }
         }
+    }
+    protected void txtNGAYDANG_SelectionChanged(object sender, EventArgs e)
+    {
+        lnbNgay.Text = txtNGAYDANG.SelectedDate.ToShortDateString();
     }
 }
